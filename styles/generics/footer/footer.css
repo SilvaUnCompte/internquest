@@ -22,6 +22,14 @@ footer {
   color: red;
 }
 
+#media_icon_facebook:hover,
+#media_icon_twitter:hover,
+#media_icon_instagram:hover,
+#media_icon_linkedin:hover,
+#media_icon_github:hover {
+  color: whitesmoke;
+}
+
 .links p {
   color: rgb(137, 183, 243);
 }
@@ -31,12 +39,7 @@ footer {
 }
 
 .fab {
-  font-size: 1.5em;
-}
-
-.fab:hover {
-  color: whitesmoke;
-  font-size: 1.7em;
+  font-size: 1.9vw;
 }
 
 .footer_text {
