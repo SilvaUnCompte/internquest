@@ -31,6 +31,46 @@ body {
   align-items: center;
 }
 
+.register-box {
+  height: 570px;
+}
+
+.input-check {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+.input-check label {
+  padding-left: 10px;
+  color: #fff;
+  font-size: 1em;
+}
+.input-check input {
+  width: 20px;
+  height: 20px;
+}
+
+#home {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  color: #fff;
+  font-size: 1.9em;
+  cursor: pointer;
+}
+#home #home-full {
+  display: none;
+}
+
+#home:hover #home-full {
+  display: block;
+}
+#home:hover #home-outline {
+  display: none;
+}
+
 h2 {
   font-size: 2em;
   color: #fff;
