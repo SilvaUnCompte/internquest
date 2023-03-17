@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="assets/images/book.png" />
+    <link rel="icon" href="../../assets/images/book.png" />
 
-    <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../vendors/fontawesome/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../styles/pages/home/parallax.css">
-    <link rel="stylesheet" href="../styles/pages/home/search.css">
+    <link href="../../assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/home/parallax.css">
+    <link rel="stylesheet" href="../styles/home/search.css">
     <link rel="stylesheet" href="../styles/generics/header/header.css">
     <link rel="stylesheet" href="../styles/generics/footer/footer.css">
     <title>InternQuest</title>
@@ -83,7 +83,7 @@
 
     <?php require_once 'components/footer.php'; ?>
 
-    <script src="../scripts/parallax.js"></script>
+    <script src="../js/parallax.js"></script>
 </body>
 
 </html>

@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-tofit=no">
-        <link href="../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="../vendors/fontawesome/css/all.min.css" rel="stylesheet">
+        <link href="../../assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
         <link href="../styles/research/research_style.css" rel="stylesheet">
         <link rel="stylesheet" href="../styles/generics/header/header.css">
         <link rel="stylesheet" href="../styles/generics/footer/footer.css">
@@ -21,7 +21,7 @@
                     <div id="top_div">
                         <h2>Filters</h2>
                         <a id="filter_closing_link" href="#" >
-                            <img src="../images/43165.webp" width="25px" height="25px">
+                            <img src="../../assets/images/43165.webp" width="25px" height="25px">
                         </a>
                     </div>
                     <form method="get">
@@ -191,6 +191,6 @@
         <script src="../vendors/jquery/jquery-3.6.0.min.js"></script>
         <script src="../vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
         <!------------------------------------------------------------------------------>
-        <script src="../scripts/research/research.js"></script>
+        <script src="../js/research/research.js"></script>
     </body>
 </html>
