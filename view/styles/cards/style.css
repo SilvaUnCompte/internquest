@@ -1,22 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-html {
-  overflow: hidden;
-}
-body {
-  font-family: 'Staatliches', cursive;
-  margin: 0;  
-  padding: 0;
-  box-sizing: border-box;
-}
 .wrapper {
-  position: absolute;
+  font-family: 'Staatliches', cursive;
+  position: relative;
   
   width: 300px;
   height: 150px;
   
   background: hsl(0,0%,95%);
-  box-shadow: 1px 1px 25px 3px rgba(0,0,0,.3);
+  box-shadow: 1px 1px 10px 3px rgba(0,0,0,.3);
   border: 0;
   border-radius: 33px 0px 0px 33px;
 }
@@ -32,6 +24,7 @@ body {
   top: 25%;
   left: 7%;
 }
+
 .header::after {
   content:'';
   position: absolute;

@@ -1,6 +1,6 @@
 <header id="native-header">
         <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
-            <img id="company_name" src="../../assets/images/logo.png" alt="InternQuest logo" width="300px">
+            <a href="index.php"><img id="company_name" src="../../assets/images/logo.png" alt="InternQuest logo" width="300px"></a>
             <div id="button_div_header">
                 <button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>
                 <button id="login_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>Se connecter</span></button>

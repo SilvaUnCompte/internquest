@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.navbar[aria-label=second_header] {
+  display: none;
+}
+
 main #first_row {
   display: flex;
   justify-content: center;
@@ -88,9 +92,33 @@ main #first_row #filters_column .fourth_filter #max_div, main #first_row #filter
   margin-left: 15px;
 }
 main #first_row #search_and_results_column {
+  display: flex;
   position: relative;
   margin: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+}
+main #first_row #search_and_results_column #search_row, main #first_row #search_and_results_column #search_bar {
   padding: 0;
+}
+main #first_row #search_and_results_column #results_row {
+  overflow-y: scroll;
+  display: flex;
+  background-color: rgb(236, 236, 236);
+  width: 100%;
+  height: 600px;
+  border-bottom: 1px solid rgb(197, 197, 197);
+  border-right: 1px solid rgb(197, 197, 197);
+  border-radius: 10px 10px 50px 10px;
+  box-shadow: 1px 1px 25px 3px rgba(0, 0, 0, 0.3);
+}
+main #first_row #search_and_results_column #results_row #card_list .wrapper {
+  margin: 10px;
+}
+main #first_row #search_and_results_column #results_row #card_info_showing {
+  height: 550px;
+  width: 550px;
 }
 
 #search_bar {

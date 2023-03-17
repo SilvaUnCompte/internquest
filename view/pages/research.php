@@ -175,7 +175,19 @@
                             </form>
                         </div>
                         <div id="results_row" class="row">
-                            
+                            <div id="card_list">
+                                <?php
+                                    include('templates/card.php');
+                                    include('templates/card.php');
+                                    include('templates/card.php');
+                                    include('templates/card.php');
+                                    include('templates/card.php');
+                                    include('templates/card.php');
+                                ?>
+                            </div>
+                            <div id="card_info_showing">
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
