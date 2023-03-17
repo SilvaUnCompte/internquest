@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.selector-for-some-widget {
+  box-sizing: content-box;
+}
+
+main {
+  min-height: 100%;
+}
+
+.row {
+  margin: 0;
+  width: 100%;
+}
+
+.main_parts_, .main_parts {
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.main_parts_ {
+  background-color: rgb(180, 169, 156);
+}
+
+.main_parts {
+  background-color: rgb(143, 130, 119);
+}
+
+#first_row {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../../images/bg_stage.png");
+}
+#first_row input {
+  width: 20vw;
+}
+#first_row h1 {
+  color: whitesmoke;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 5vh;
+  padding: 0;
+  text-shadow: #000 1px 0 8px;
+  font-size: 2.5vw;
+}
+
+.search_bar {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+.search_bar input[aria-label=post_search],
+.search_bar input[aria-label=localisation_search] {
+  font-size: 2vw;
+  padding: 0.5vw 0.5vw 0.5vw 1vw;
+}
+.search_bar input[aria-label=post_search] {
+  border-radius: 10px 0px 0px 10px;
+}
+.search_bar input[aria-label=post_search] {
+  border-radius: 10px 0px 0px 10px;
+}
+.search_bar input[aria-label=localisation_search] {
+  border-radius: 0;
+}
+.search_bar button {
+  font-size: 2vw;
+  border-radius: 0px 10px 10px 0px;
+}/*# sourceMappingURL=default_style.css.map */

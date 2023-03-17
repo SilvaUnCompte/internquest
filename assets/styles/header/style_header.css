@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap");
+#company_name {
+  margin-left: 10px;
+  text-transform: uppercase;
+}
+
+#register_button {
+  margin-right: 0.5vw;
+}
+
+#employer_welcome {
+  text-align: right;
+}
+
+.navbar[aria-label=second_header] {
+  background-color: rgb(77, 77, 77);
+}
+
+.navbar[aria-label=second_header] a {
+  color: whitesmoke;
+}
+
+.nav_item:hover {
+  background-color: #34383b;
+  color: whitesmoke;
+}
+
+#account_avatar {
+  display: none;
+  margin-right: 20px;
+  filter: invert(1);
+}
+
+@media screen and (max-width: 800px) {
+  #account_avatar {
+    display: block;
+  }
+  #login_button, #register_button {
+    display: none;
+  }
+}/*# sourceMappingURL=style_header.css.map */
