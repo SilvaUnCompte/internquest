@@ -8,14 +8,19 @@
 }
 
 main #first_row {
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
   min-height: 100vh;
   background-color: rgb(240, 240, 240);
 }
 main #first_row #filters_column {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 25%;
   display: none;
   flex-direction: column;
   padding: 0;
@@ -92,7 +97,11 @@ main #first_row #filters_column .fourth_filter #max_div, main #first_row #filter
   margin-left: 15px;
 }
 main #first_row #search_and_results_column {
+  width: 70%;
   display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-content: center;
   position: relative;
   margin: 0;
   padding-top: 0;
@@ -103,22 +112,36 @@ main #first_row #search_and_results_column #search_row, main #first_row #search_
   padding: 0;
 }
 main #first_row #search_and_results_column #results_row {
-  overflow-y: scroll;
   display: flex;
+  justify-content: start;
   background-color: rgb(236, 236, 236);
   width: 100%;
-  height: 600px;
+  height: 60%;
   border-bottom: 1px solid rgb(197, 197, 197);
   border-right: 1px solid rgb(197, 197, 197);
-  border-radius: 10px 10px 50px 10px;
+  border-radius: 10px 10px 10px 10px;
   box-shadow: 1px 1px 25px 3px rgba(0, 0, 0, 0.3);
 }
+main #first_row #search_and_results_column #results_row #card_list {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 30%;
+  height: 100%;
+  overflow-y: scroll;
+}
 main #first_row #search_and_results_column #results_row #card_list .wrapper {
-  margin: 10px;
+  margin-bottom: 12px;
+  margin-top: 12px;
 }
 main #first_row #search_and_results_column #results_row #card_info_showing {
-  height: 550px;
-  width: 550px;
+  display: none;
+  width: 65%;
+  height: 95%;
+  padding-right: 5%;
+  margin-top: 12px;
+  background-color: #fff;
+  overflow-y: scroll;
 }
 
 #search_bar {
@@ -127,7 +150,7 @@ main #first_row #search_and_results_column #results_row #card_info_showing {
   min-height: 12vh;
 }
 #search_bar input[type=search] {
-  width: 60em;
+  width: 100%;
   margin: 0;
 }
 #search_bar button[type=button] {

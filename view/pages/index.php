@@ -18,9 +18,7 @@
 
 <body>
     
-    <?php
-        require_once 'components/header.php';
-    ?>
+    <?php include_once 'components/header.php';?>
 
     <div class="sample-header">
         <div class="sample-header-section">
@@ -81,7 +79,7 @@
         </div>
     </div>
 
-    <?php require_once 'components/footer.php'; ?>
+    <?php include_once 'components/footer.php'; ?>
 
     <script src="../js/parallax.js"></script>
 </body>

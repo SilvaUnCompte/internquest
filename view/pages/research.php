@@ -17,7 +17,7 @@
 
         <main>
             <div id="first_row" class="row">
-                <div id="filters_column" class="col-3">
+                <div id="filters_column">
                     <div id="top_div">
                         <h2>Filters</h2>
                         <a id="filter_closing_link" href="#" >
@@ -165,7 +165,7 @@
                         </div>
                     </form>
                 </div>
-                <div id="search_and_results_column" class="col-9">
+                <div id="search_and_results_column">
                     <div>
                         <div id="search_row" class="row">
                             <form id="search_bar" class="d-flex">
