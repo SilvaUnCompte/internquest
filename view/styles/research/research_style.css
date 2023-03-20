@@ -7,6 +7,9 @@
   display: none;
 }
 
+main {
+  overflow-x: hidden;
+}
 main #first_row {
   width: 100%;
   display: flex;
@@ -109,10 +112,13 @@ main #first_row #search_and_results_column {
   padding-right: 0;
 }
 main #first_row #search_and_results_column #search_row, main #first_row #search_and_results_column #search_bar {
+  margin: 0;
   padding: 0;
 }
 main #first_row #search_and_results_column #results_row {
   display: flex;
+  margin: 0;
+  padding: 0;
   justify-content: start;
   background-color: rgb(236, 236, 236);
   width: 100%;

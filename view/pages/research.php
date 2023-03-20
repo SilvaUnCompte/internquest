@@ -43,6 +43,10 @@
                                             <input class="form-check-input" type="radio" name="radioChoice" id="formRadioDefault">
                                             <label class="form-check-label" for="formRadioDefault">Entreprise</label>
                                         </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="radioChoice" id="formRadioDefault">
+                                            <label class="form-check-label" for="formRadioDefault">Etudiant</label>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
@@ -138,25 +142,25 @@
                             </div>
                             </div>
                             <div class="accordion-item">
-                                <h2 class="accordion-header" id="headingFour">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    Durée du stage
-                                </button>
-                                </h2>
-                                <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionBasic">
-                                <div class="fourth_filter accordion-body">
-                                    <form id="fourth_filter">
-                                        <div id="min_div">
-                                            <label for="min_duration">Min : </label>
-                                            <input id="min_duration" type="number" min="0" max="28" value=>
-                                        </div>
-                                        <div id="max_div">
-                                            <label for="max_duration">Max : </label>
-                                            <input id="max_duration" type="number"min="0" max="28">
-                                        </div>
-                                    </form>
-                                </div>
-                                </div>
+                            <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Durée du stage
+                            </button>
+                            </h2>
+                            <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour" data-bs-parent="#accordionBasic">
+                            <div class="fourth_filter accordion-body">
+                                <form id="fourth_filter">
+                                    <div id="min_div">
+                                        <label for="min_duration">Min : </label>
+                                        <input id="min_duration" type="number" min="0" max="28" value=>
+                                    </div>
+                                    <div id="max_div">
+                                        <label for="max_duration">Max : </label>
+                                        <input id="max_duration" type="number"min="0" max="28">
+                                    </div>
+                                </form>
+                            </div>
+                            </div>
                             </div>
                         </div>
                         <div id="bottom_div">

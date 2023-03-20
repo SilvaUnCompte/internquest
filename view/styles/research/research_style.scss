@@ -21,6 +21,7 @@ $border_results : rgb(197, 197, 197);
 }
 
 main{
+    overflow-x:hidden;
     #first_row{
         width: 100%;
         display: flex;
@@ -121,10 +122,13 @@ main{
             padding-bottom:0;
             padding-right: 0;
             #search_row, #search_bar{
+                margin: 0;
                 padding: 0;
             }
             #results_row{
                 display: flex;
+                margin: 0;
+                padding: 0;
                 justify-content: start;
                 background-color: $background_results;
                 width: 100%;
