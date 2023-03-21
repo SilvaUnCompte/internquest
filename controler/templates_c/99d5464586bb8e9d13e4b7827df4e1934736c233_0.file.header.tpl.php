@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 15:31:20
+/* Smarty version 4.2.1, created on 2023-03-21 21:37:40
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6419bfb841eed1_24666315',
+  'unifunc' => 'content_641a1594c72707_03384182',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99d5464586bb8e9d13e4b7827df4e1934736c233' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\header.tpl',
-      1 => 1679409070,
+      1 => 1679431059,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6419bfb841eed1_24666315 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641a1594c72707_03384182 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -46,8 +46,7 @@ function content_6419bfb841eed1_24666315 (Smarty_Internal_Template $_smarty_tpl)
           width="300px"></a>
       <div id="button_div_header">
         <!--<button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>-->
-        <button id="login_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>Se
-            connecter</span></button>
+        <a id="login_button" class="btn btn-primary" href="login.php">Se connecter</a>
 
         <img id="account_avatar" src="../assets/images/avatar.svg" alt="Avatar image" width="50px">
       </div>

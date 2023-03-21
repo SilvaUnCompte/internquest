@@ -55,16 +55,16 @@
                         Lien utiles
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Page d'accueil</a>
+                        <a href="index.php" class="text-reset">Page d'accueil</a>
                     </p>
                     <p>
                         <a href="#!" class="text-reset">Rechercher</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Se connecter</a>
+                        <a href="login.php" class="text-reset">Se connecter</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Plan du site</a>
+                        <a href="sitemap.php" class="text-reset">Plan du site</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -98,9 +98,9 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2023 Copyright :
-        <a class="text-reset fw-bold" href="http://internship.oneiricforge.com/">InterQuest.com</a>
+        <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InterQuest.com</a>
         |
-        <a class="text-reset fw-bold" href="legal_mentions.html">Mentions légales & conditions d'utilisation</a>
+        <a class="text-reset fw-bold" href="legal_mention.php">Mentions légales & conditions d'utilisation</a>
     </div>
     <!-- Copyright -->
 </footer>

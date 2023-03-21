@@ -22,8 +22,7 @@
           width="300px"></a>
       <div id="button_div_header">
         <!--<button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>-->
-        <button id="login_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>Se
-            connecter</span></button>
+        <a id="login_button" class="btn btn-primary" href="login.php">Se connecter</a>
 
         <img id="account_avatar" src="../assets/images/avatar.svg" alt="Avatar image" width="50px">
       </div>
