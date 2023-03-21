@@ -5,5 +5,5 @@ $smarty = new Smarty();
 
 $smarty->setTemplateDir('../public/templates/');
 
-$smarty->assign("title", "Home");
+$smarty->assign("title", "InternQuest");
 $smarty->display("index.tpl");

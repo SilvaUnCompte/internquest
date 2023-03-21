@@ -32,15 +32,15 @@
     <nav id="second_header">
       <ul class="navbar-nav me-auto mb-2 mb-xl-0">
         <li class="nav-item">
-          <a id="nav-accueil" class="nav-link active nav-click" aria-current="page" href="#">Accueil</a>
+          <a id="nav-accueil" class="nav-link active" aria-current="page" href="#">Accueil</a>
         </li>
-        <li id="nav-recherche" class="nav-item nav-click">
+        <li id="nav-recherche" class="nav-item">
           <a class="nav-link" href="research.php">Rechercher</a>
         </li>
       </ul>
       <ul class="navbar-nav mb-2 mb-xl-0">
         <li class="nav-item">
-          <a id="nav-tech" class="nav-link nav-click" href="#">Support technique ➔</a>
+          <a id="nav-tech" class="nav-link" href="#">Support technique ➔</a>
         </li>
       </ul>
     </nav>

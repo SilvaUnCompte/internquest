@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 15:11:20
+/* Smarty version 4.2.1, created on 2023-03-21 15:31:20
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6419bb08e698d9_86035701',
+  'unifunc' => 'content_6419bfb841eed1_24666315',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99d5464586bb8e9d13e4b7827df4e1934736c233' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\header.tpl',
-      1 => 1679407879,
+      1 => 1679409070,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6419bb08e698d9_86035701 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6419bfb841eed1_24666315 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -56,15 +56,15 @@ function content_6419bb08e698d9_86035701 (Smarty_Internal_Template $_smarty_tpl)
     <nav id="second_header">
       <ul class="navbar-nav me-auto mb-2 mb-xl-0">
         <li class="nav-item">
-          <a id="nav-accueil" class="nav-link active nav-click" aria-current="page" href="#">Accueil</a>
+          <a id="nav-accueil" class="nav-link active" aria-current="page" href="#">Accueil</a>
         </li>
-        <li id="nav-recherche" class="nav-item nav-click">
+        <li id="nav-recherche" class="nav-item">
           <a class="nav-link" href="research.php">Rechercher</a>
         </li>
       </ul>
       <ul class="navbar-nav mb-2 mb-xl-0">
         <li class="nav-item">
-          <a id="nav-tech" class="nav-link nav-click" href="#">Support technique ➔</a>
+          <a id="nav-tech" class="nav-link" href="#">Support technique ➔</a>
         </li>
       </ul>
     </nav>
