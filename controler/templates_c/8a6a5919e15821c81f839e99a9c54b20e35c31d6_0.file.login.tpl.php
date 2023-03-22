@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 21:52:41
+/* Smarty version 4.2.1, created on 2023-03-22 16:36:27
   from 'C:\xampp\htdocs\www\internquest\public\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641a19192fef48_73419038',
+  'unifunc' => 'content_641b207bd1f567_70796083',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a6a5919e15821c81f839e99a9c54b20e35c31d6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\login.tpl',
-      1 => 1679431958,
+      1 => 1679499386,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641a19192fef48_73419038 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b207bd1f567_70796083 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -28,20 +28,20 @@ function content_641a19192fef48_73419038 (Smarty_Internal_Template $_smarty_tpl)
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/images/book.png" />
+    <link rel="icon" href="/assets/images/book.png" />
 
-    <link href="../assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../public/styles/generics/header/header.css">
-    <link rel="stylesheet" href="../public/styles/generics/footer/footer.css">
+    <link href="/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/generics/header/header.css">
+    <link rel="stylesheet" href="/public/styles/generics/footer/footer.css">
     <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
 </head>
 
-<link rel="stylesheet" href="../public/styles/login/login.css">
+<link rel="stylesheet" href="/public/styles/login/login.css">
 
 
-<a id="home" href="index.php">
+<a id="home" href="/controler/index.php">
     <ion-icon name="home-outline" id="home-outline"></ion-icon>
     <ion-icon name="home" id="home-full"></ion-icon>
 </a>
@@ -53,20 +53,20 @@ function content_641a19192fef48_73419038 (Smarty_Internal_Template $_smarty_tpl)
                 <h2>Login</h2>
                 <div class="input-box">
                     <ion-icon name="mail-outline"></ion-icon>
-                    <input type="email" required placeholder=" ">
-                    <label for="">Email</label>
+                    <input id="email_id" type="email" required placeholder=" ">
+                    <label for="email_id">Email</label>
                 </div>
                 <div class="input-box">
                     <ion-icon name="lock-closed-outline"></ion-icon>
-                    <input type="password" required placeholder=" ">
-                    <label for="">Password</label>
+                    <input id="password_id" type="password" required placeholder=" ">
+                    <label for="password_id">Password</label>
                 </div>
                 <div class="forget">
                     <a href="#">Forget Password?</a>
                 </div>
                 <input type="submit" value="Login">
                 <div class="register">
-                    <p>Don't have an account? <a href="register.html">Call your pilot</a></p>
+                    <p>Don't have an account? <a href="/controler/register.html">Call your pilot</a></p>
                 </div>
             </form>
         </div>

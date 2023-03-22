@@ -1,8 +1,8 @@
 {include file='helpers/header.tpl'}
 
-<link href="../public/styles/generics/commons/commons.css" rel="stylesheet">
-<link href="../public/styles/research/research_style.css" rel="stylesheet">
-<link href="../public/styles/cards/style.css" rel="stylesheet">
+<link href="/public/styles/generics/commons/commons.css" rel="stylesheet">
+<link href="/public/styles/research/research_style.css" rel="stylesheet">
+<link href="/public/styles/cards/style.css" rel="stylesheet">
 
 
 <main>
@@ -11,7 +11,7 @@
         <div id="top_div">
             <h2>Filters</h2>
             <a id="filter_closing_link" href="#" >
-                <img src="../assets/images/43165.webp" width="25px" height="25px">
+                <img src="/assets/images/43165.webp" width="25px" height="25px">
             </a>
         </div>
         <form method="get">
@@ -189,4 +189,4 @@
 </main>
 
 {include file="helpers/footer.tpl"}
-<script src="../js/research/research.js"></script>
+<script src="/public/js/research.js"></script>

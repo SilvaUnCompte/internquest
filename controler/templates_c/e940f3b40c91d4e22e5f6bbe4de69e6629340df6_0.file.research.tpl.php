@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 22:15:19
+/* Smarty version 4.2.1, created on 2023-03-22 16:34:01
   from 'C:\xampp\htdocs\www\internquest\public\templates\research.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641a1e67ec0992_97531620',
+  'unifunc' => 'content_641b1fe9c99115_08586843',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e940f3b40c91d4e22e5f6bbe4de69e6629340df6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\research.tpl',
-      1 => 1679433319,
+      1 => 1679498777,
       2 => 'file',
     ),
   ),
@@ -23,13 +23,13 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_641a1e67ec0992_97531620 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b1fe9c99115_08586843 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<link href="../public/styles/generics/commons/commons.css" rel="stylesheet">
-<link href="../public/styles/research/research_style.css" rel="stylesheet">
-<link href="../public/styles/cards/style.css" rel="stylesheet">
+<link href="/public/styles/generics/commons/commons.css" rel="stylesheet">
+<link href="/public/styles/research/research_style.css" rel="stylesheet">
+<link href="/public/styles/cards/style.css" rel="stylesheet">
 
 
 <main>
@@ -38,7 +38,7 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
         <div id="top_div">
             <h2>Filters</h2>
             <a id="filter_closing_link" href="#" >
-                <img src="../assets/images/43165.webp" width="25px" height="25px">
+                <img src="/assets/images/43165.webp" width="25px" height="25px">
             </a>
         </div>
         <form method="get">
@@ -202,8 +202,7 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
                     <?php $_smarty_tpl->_subTemplateRender("file:card.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
                     <?php $_smarty_tpl->_subTemplateRender("file:card.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
-?>
-                    <?php $_smarty_tpl->_subTemplateRender("file:card.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>                     <?php $_smarty_tpl->_subTemplateRender("file:card.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
                     <?php $_smarty_tpl->_subTemplateRender("file:card.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
@@ -222,6 +221,6 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
 
 <?php $_smarty_tpl->_subTemplateRender("file:helpers/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 echo '<script'; ?>
- src="../js/research/research.js"><?php echo '</script'; ?>
+ src="/public/js/research.js"><?php echo '</script'; ?>
 ><?php }
 }

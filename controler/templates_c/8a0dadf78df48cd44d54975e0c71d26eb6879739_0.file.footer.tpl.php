@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 21:38:14
+/* Smarty version 4.2.1, created on 2023-03-22 16:24:01
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641a15b6a248b0_35787331',
+  'unifunc' => 'content_641b1d915e6496_60745555',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a0dadf78df48cd44d54975e0c71d26eb6879739' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\footer.tpl',
-      1 => 1679431092,
+      1 => 1679498640,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641a15b6a248b0_35787331 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b1d915e6496_60745555 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->
@@ -78,16 +78,16 @@ function content_641a15b6a248b0_35787331 (Smarty_Internal_Template $_smarty_tpl)
                         Lien utiles
                     </h6>
                     <p>
-                        <a href="index.php" class="text-reset">Page d'accueil</a>
+                        <a href="/controler/index.php" class="text-reset">Page d'accueil</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Rechercher</a>
+                        <a href="/controler/research.php" class="text-reset">Rechercher</a>
                     </p>
                     <p>
-                        <a href="login.php" class="text-reset">Se connecter</a>
+                        <a href="/controler/login.php" class="text-reset">Se connecter</a>
                     </p>
                     <p>
-                        <a href="sitemap.php" class="text-reset">Plan du site</a>
+                        <a href="/controler/sitemap.php" class="text-reset">Plan du site</a>
                     </p>
                 </div>
                 <!-- Grid column -->

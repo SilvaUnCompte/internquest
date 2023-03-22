@@ -55,16 +55,16 @@
                         Lien utiles
                     </h6>
                     <p>
-                        <a href="index.php" class="text-reset">Page d'accueil</a>
+                        <a href="/controler/index.php" class="text-reset">Page d'accueil</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Rechercher</a>
+                        <a href="/controler/research.php" class="text-reset">Rechercher</a>
                     </p>
                     <p>
-                        <a href="login.php" class="text-reset">Se connecter</a>
+                        <a href="/controler/login.php" class="text-reset">Se connecter</a>
                     </p>
                     <p>
-                        <a href="sitemap.php" class="text-reset">Plan du site</a>
+                        <a href="/controler/sitemap.php" class="text-reset">Plan du site</a>
                     </p>
                 </div>
                 <!-- Grid column -->

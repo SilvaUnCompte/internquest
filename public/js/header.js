@@ -10,14 +10,13 @@ window.addEventListener("scroll", (event) => {
 
             for(let i = 0; i < nav_click.length; i++) {
                 nav_click[i].href="#";
-                console.log(nav_click[i]);
+                // console.log(nav_click[i]);
             }
         }
         else {
             second_header.style.opacity = 1;
-            nav_click[1].href="#";
-            nav_click[2].href="#";
-            nav_click[3].href="#";
+            nav_click[0].href="/public/templates/index.php";
+            nav_click[1].href="/public/templates/research.php";
         }
     }
 });

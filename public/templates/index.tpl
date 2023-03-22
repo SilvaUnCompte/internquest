@@ -1,7 +1,7 @@
 {include file='helpers/header.tpl'}
 
-<link rel="stylesheet" href="../public/styles/home/parallax.css">
-<link rel="stylesheet" href="../public/styles/home/search.css">
+<link rel="stylesheet" href="/public/styles/home/parallax.css">
+<link rel="stylesheet" href="/public/styles/home/search.css">
 
     <div class="sample-header">
         <div class="sample-header-section" id="sample-section">

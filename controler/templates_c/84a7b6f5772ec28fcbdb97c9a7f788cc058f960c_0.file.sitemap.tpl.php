@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 16:18:52
+/* Smarty version 4.2.1, created on 2023-03-22 16:37:43
   from 'C:\xampp\htdocs\www\internquest\public\templates\sitemap.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6419cadc700580_15670540',
+  'unifunc' => 'content_641b20c72dc1f0_59315474',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '84a7b6f5772ec28fcbdb97c9a7f788cc058f960c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\sitemap.tpl',
-      1 => 1679411931,
+      1 => 1679499462,
       2 => 'file',
     ),
   ),
@@ -22,28 +22,28 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6419cadc700580_15670540 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b20c72dc1f0_59315474 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-<link rel="stylesheet" href="../public/styles/sitemap/sitemap.css">
+<link rel="stylesheet" href="/public/styles/sitemap/sitemap.css">
 
 
 <div id="basic-core">
     <h2>Site Map</h2>
     <ul>
-        <li><a href="index.php">Home</a></li>
-        <li><a href="#about.html">About</a></li>
-        <li><a href="sitemap.html">Site Map</a></li>
-        <li><a href="login.html">Connexion</a></li>
-        <li><a href="register.html">Account creation page</a></li>
+        <li><a href="/controler/index.php">Home</a></li>
+        <li><a href="/controler/#about.html">About</a></li>
+        <li><a href="/controler/sitemap.html">Site Map</a></li>
+        <li><a href="/controler/login.html">Connexion</a></li>
+        <li><a href="/controler/register.html">Account creation page</a></li>
         <li><a href="#personal-page.html">Personal page</a></li>
-        <li><a href="search.html">Search page</a></li>
+        <li><a href="/controler/search.html">Search page</a></li>
     </ul>
     <h2>Student area</h2>
     <ul>
-        <li><a href="#wish-list.html">Wish list page</a></li>
-        <li><a href="#follow-apply.html">Follow-up application page</a></li>
+        <li><a href="/controler/#wish-list.html">Wish list page</a></li>
+        <li><a href="/controler/#follow-apply.html">Follow-up application page</a></li>
     </ul>
     <h2>Tutor area</h2>
     <ul>
