@@ -5,34 +5,37 @@
 
 <main id="basic-core">
     <div class="form-box">
-        <h1>Ajouter un {$account_type == (1) ? 'pilote' : 'etudiant'}</h1>
-        <form>
-            <div class="form-row">
-                <div class="form-col">
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="input_email" placeholder="Email" required
-                            pattern="[^@\s]+@[^@\s]+.[^@\s]">
-                        <input type="text" class="form-control" id="input_password" placeholder="Mot de passe" required
-                            pattern="[A-Za-z-]$">
+        <h2>Ajouter un {$account_type == (1) ? 'pilote' : 'etudiant'}</h1>
+            <form>
+                <div class="form-row">
+                    <div class="form-col">
+                        <label for="input_email">Informations de connexion</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="input_email" placeholder="Email" required
+                                pattern="[^@\s]+@[^@\s]+.[^@\s]">
+                            <input type="text" class="form-control" id="input_password" placeholder="Mot de passe"
+                                required pattern="[A-Za-z-]$">
+                        </div>
+                        <label for="input_email">Nom prenom</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="input_lastname" placeholder="Nom" required
+                                pattern="[A-Za-z-]$">
+                            <input type="text" class="form-control" id="input_firstname" placeholder="Prenom" required
+                                pattern="[A-Za-z-]$">
+                        </div>
+                        <label for="input_email">Informations d'école</label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="input_campus" placeholder="Campus" required
+                                pattern="[A-Za-z-]$">
+                            <input type="text" class="form-control" id="input_promotion" placeholder="Promotion"
+                                required pattern="[A-Za-z-]$">
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="input_lastname" placeholder="Nom" required
-                            pattern="[A-Za-z-]$">
-                        <input type="text" class="form-control" id="input_firstname" placeholder="Prenom" required
-                            pattern="[A-Za-z-]$">
-                    </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="input_campus" placeholder="Campus" required
-                            pattern="[A-Za-z-]$">
-                        <input type="text" class="form-control" id="input_promotion" placeholder="Promotion" required
-                            pattern="[A-Za-z-]$">
-                    </div>
+                    <img src="/assets/images/default.png" alt="add user" id="avatar">
                 </div>
-                <img src="/assets/images/default.png" alt="add user" id="avatar">
-            </div>
-            <input type="submit"><input type="reset">
+                <input type="submit" value="Valider"><input type="reset">
 
-        </form>
+            </form>
     </div>
 </main>
 

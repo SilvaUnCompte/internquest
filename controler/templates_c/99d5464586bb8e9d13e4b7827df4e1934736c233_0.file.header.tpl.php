@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-22 18:47:06
+/* Smarty version 4.2.1, created on 2023-03-23 21:20:46
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641b3f1aaf0f57_94786513',
+  'unifunc' => 'content_641cb49ebc1638_75533790',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99d5464586bb8e9d13e4b7827df4e1934736c233' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\header.tpl',
-      1 => 1679507211,
+      1 => 1679600406,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b3f1aaf0f57_94786513 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641cb49ebc1638_75533790 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -30,7 +30,8 @@ function content_641b3f1aaf0f57_94786513 (Smarty_Internal_Template $_smarty_tpl)
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/assets/images/book.png" />
   <link rel="manifest" href="/public/manifest.json">
-
+  <meta name="theme-color" content="#424549"/>
+  
   <link href="/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/public/styles/generics/header/header.css">
@@ -43,13 +44,13 @@ function content_641b3f1aaf0f57_94786513 (Smarty_Internal_Template $_smarty_tpl)
 
   <header id="native-header">
     <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
-      <a href="/controler/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
-          width="300"></a>
+      <a href="/controler/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo" loading="lazy"
+          width="300" height="77.2"></a>
       <div id="button_div_header">
         <!--<button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>-->
         <a id="login_button" class="btn btn-primary" href="login.php">Se connecter</a>
 
-        <img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50">
+        <img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50" loading="lazy">
       </div>
     </nav>
 

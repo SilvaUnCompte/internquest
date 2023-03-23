@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-22 18:58:04
+/* Smarty version 4.2.1, created on 2023-03-23 21:20:46
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641b41ac034284_24450448',
+  'unifunc' => 'content_641cb49ecd1ee9_68178785',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a0dadf78df48cd44d54975e0c71d26eb6879739' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\footer.tpl',
-      1 => 1679507796,
+      1 => 1679599718,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b41ac034284_24450448 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641cb49ecd1ee9_68178785 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->
@@ -33,19 +33,19 @@ function content_641b41ac034284_24450448 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Right -->
         <div id="media_icon_div">
-            <a id="link_media_icon_facebook" href="" class="me-4 text-reset">
+            <a id="link_media_icon_facebook" href="#" aria-label="Facebook" class="me-4 text-reset">
                 <i id="media_icon_facebook" class="fab fa-facebook-f"></i>
             </a>
-            <a id="link_media_icon_twitter" href="" class="me-4 text-reset">
+            <a id="link_media_icon_twitter" href="#" aria-label="Twitter" class="me-4 text-reset">
                 <i id="media_icon_twitter" class="fab fa-twitter"></i>
             </a>
-            <a id="link_media_icon_instagram" href="" class="me-4 text-reset">
+            <a id="link_media_icon_instagram" href="#" aria-label="Insta" class="me-4 text-reset">
                 <i id="media_icon_instagram" class="fab fa-instagram"></i>
             </a>
-            <a id="link_media_icon_linkedin" href="" class="me-4 text-reset">
+            <a id="link_media_icon_linkedin" href="#" aria-label="Linkedin" class="me-4 text-reset">
                 <i id="media_icon_linkedin" class="fab fa-linkedin"></i>
             </a>
-            <a id="link_media_icon_github" href="" class="me-4 text-reset">
+            <a id="link_media_icon_github" href="#" aria-label="github" class="me-4 text-reset">
                 <i id="media_icon_github" class="fab fa-github"></i>
             </a>
         </div>
@@ -129,9 +129,6 @@ function content_641b41ac034284_24450448 (Smarty_Internal_Template $_smarty_tpl)
 </footer>
 <!-- Footer -->
 
-<?php echo '<script'; ?>
- src="../assets/vendors/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
->
 <?php echo '<script'; ?>
  src="../assets/vendors/jquery/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >

@@ -10,19 +10,19 @@
 
         <!-- Right -->
         <div id="media_icon_div">
-            <a id="link_media_icon_facebook" href="" class="me-4 text-reset">
+            <a id="link_media_icon_facebook" href="#" aria-label="Facebook" class="me-4 text-reset">
                 <i id="media_icon_facebook" class="fab fa-facebook-f"></i>
             </a>
-            <a id="link_media_icon_twitter" href="" class="me-4 text-reset">
+            <a id="link_media_icon_twitter" href="#" aria-label="Twitter" class="me-4 text-reset">
                 <i id="media_icon_twitter" class="fab fa-twitter"></i>
             </a>
-            <a id="link_media_icon_instagram" href="" class="me-4 text-reset">
+            <a id="link_media_icon_instagram" href="#" aria-label="Insta" class="me-4 text-reset">
                 <i id="media_icon_instagram" class="fab fa-instagram"></i>
             </a>
-            <a id="link_media_icon_linkedin" href="" class="me-4 text-reset">
+            <a id="link_media_icon_linkedin" href="#" aria-label="Linkedin" class="me-4 text-reset">
                 <i id="media_icon_linkedin" class="fab fa-linkedin"></i>
             </a>
-            <a id="link_media_icon_github" href="" class="me-4 text-reset">
+            <a id="link_media_icon_github" href="#" aria-label="github" class="me-4 text-reset">
                 <i id="media_icon_github" class="fab fa-github"></i>
             </a>
         </div>
@@ -106,7 +106,6 @@
 </footer>
 <!-- Footer -->
 
-<script src="../assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
 <script src="../public/js/header.js"></script>
 

@@ -10,14 +10,14 @@ body {
   background-color: $bg-color;
 }
 
-main{
+main {
   background-color: $bg-color;
   min-height: 100vh;
-  padding: 60px 80px;
+  padding: 60px 5%;
 }
 
-input{
-  margin: 0 5px;
+input {
+  margin: 3px 5px;
 }
 
 .form-box {
@@ -29,7 +29,13 @@ input{
   padding: 10px 15px;
 }
 
-#avatar{
+.form-line {
+  width: 80%;
+  min-width: 300px;
+  margin: 10px auto;
+}
+
+#avatar {
   display: block;
   width: 15%;
   border-radius: 50%;
@@ -37,17 +43,20 @@ input{
   margin: 0 auto;
 }
 
-.form-group{
+.form-group {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  margin: 10px 3px 50px;
+  justify-content: flex-start;
+  margin: 10px 3px 10px;
 }
-.form-col{
-  width: 98%;
+
+.form-col {
+  width: 90%;
 }
-.form-row{
+
+.form-row {
   align-items: center;
   justify-content: space-around;
   display: flex;
@@ -55,15 +64,24 @@ input{
 }
 
 @media screen and (max-width: 620px) {
-  .form-group{
+  .form-group {
     display: block;
   }
-  .form-row{
+
+  .form-row {
     display: block;
   }
-  #avatar{
+
+  #avatar {
     width: 80%;
   }
+}
+
+label{
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 15px;
 }
 
 h2 {
@@ -72,16 +90,12 @@ h2 {
   color: #000000;
 }
 
-a{
-  text-decoration:none;
-  color: #000000;
-}
-
+button,
 input[type=reset],
 input[type=submit] {
   width: 120px;
   padding: 7px;
-  margin: 20px 40px 30px;
+  margin: 10px 10px;
   background-color: #ffffff;
   color: #8f8f8f;
   border: none;
@@ -90,7 +104,31 @@ input[type=submit] {
   cursor: pointer;
 }
 
+#form-button{
+  padding: 20px 50px;
+}
+
 input[type=reset]:hover,
 input[type=submit]:hover {
   background-color: #dbebf6;
+}
+
+#input-name{
+  width: 50%;
+  min-width: 300px;
+}
+
+.entry-box{
+  width: 50%;
+  background: transparent;
+  border: 2px solid rgb(193, 193, 193);
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px 0;
+}
+
+.entry-element{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
 }

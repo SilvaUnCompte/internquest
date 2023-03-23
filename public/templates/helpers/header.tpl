@@ -7,7 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/assets/images/book.png" />
   <link rel="manifest" href="/public/manifest.json">
-
+  <meta name="theme-color" content="#424549"/>
+  
   <link href="/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/public/styles/generics/header/header.css">
@@ -19,13 +20,13 @@
 
   <header id="native-header">
     <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
-      <a href="/controler/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
-          width="300"></a>
+      <a href="/controler/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo" loading="lazy"
+          width="300" height="77.2"></a>
       <div id="button_div_header">
         <!--<button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>-->
         <a id="login_button" class="btn btn-primary" href="login.php">Se connecter</a>
 
-        <img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50">
+        <img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50" loading="lazy">
       </div>
     </nav>
 
