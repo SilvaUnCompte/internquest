@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="/assets/images/book.png" />
+  <link rel="manifest" href="/public/manifest.json">
 
   <link href="/assets/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="/assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
@@ -18,7 +19,7 @@
 
   <header id="native-header">
     <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
-      <a href="index.php"><img id="company_name" src="/assets/images/logo.png" alt="InternQuest logo"
+      <a href="/controler/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
           width="300"></a>
       <div id="button_div_header">
         <!--<button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>-->

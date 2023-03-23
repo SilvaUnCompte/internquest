@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-22 16:24:01
+/* Smarty version 4.2.1, created on 2023-03-22 18:58:04
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641b1d915e6496_60745555',
+  'unifunc' => 'content_641b41ac034284_24450448',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a0dadf78df48cd44d54975e0c71d26eb6879739' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\footer.tpl',
-      1 => 1679498640,
+      1 => 1679507796,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b1d915e6496_60745555 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641b41ac034284_24450448 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->
@@ -121,7 +121,7 @@ function content_641b1d915e6496_60745555 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2023 Copyright :
-        <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InterQuest.com</a>
+        <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InternQuest.com</a>
         |
         <a class="text-reset fw-bold" href="legal_mention.php">Mentions légales & conditions d'utilisation</a>
     </div>

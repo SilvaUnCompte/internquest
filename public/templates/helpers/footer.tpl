@@ -98,7 +98,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2023 Copyright :
-        <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InterQuest.com</a>
+        <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InternQuest.com</a>
         |
         <a class="text-reset fw-bold" href="legal_mention.php">Mentions légales & conditions d'utilisation</a>
     </div>

@@ -1,0 +1,16 @@
+{
+    "name": "internQuest",
+    "short_name": "internQuest",
+    "start_url": "/controler/index.php",
+    "display": "standalone",
+    "background_color": "#424549",
+    "theme_color": "#03a9f4",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/assets/images/book.png",
+            "type": "image/png",
+            "sizes": "256x256"
+        }
+    ]
+}
