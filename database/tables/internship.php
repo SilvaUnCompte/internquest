@@ -13,6 +13,7 @@ class Internship{
     public $remuneration;
     public $duration;
     public $location;
+    public $companyName;
     public $enable;
 
     public function  __construct($id){
@@ -28,6 +29,7 @@ class Internship{
         $this->location = $this->internshipArray['location'];
         $this->enable = $this->internshipArray['enable'];
     }
+    public function __destruct(){exit;}
     public function get_id(){return $this->id;}
     public function get_title(){return $this->title;}
     public function get_skills(){return $this->skills;}
@@ -36,6 +38,7 @@ class Internship{
     public function get_remuneration(){return $this->remuneration;}
     public function get_duration(){return $this->duration;}
     public function get_location(){return $this->location;}
+    public function get_companyName(){return $this->companyName;}
     public function get_enable(){return $this->enable;}
     public function set_title($string){$this->title = $string;}
     public function set_skills($string){
@@ -48,6 +51,7 @@ class Internship{
     public function set_location($streetAddress, $city, $postalCode){
         $this->location = ['street_address' => $streetAddress, 'city' => $city, 'postal_code' => $postalCode];
     }
+    public function set_companyName($string){$this->companyName = $string;}
     public function set_enable($bool){$this->enable = $bool;}
     public function updateInternship(){
         global $internship;
@@ -59,10 +63,11 @@ class Internship{
             "remuneration" => $this->remuneration,
             "duration" => $this->duration,
             "location" => $this->location,
+            "company_name" => $this->companyName,
             "enable" => $this->enable
         ]);
     }
-    public static function createInternship($title, $skills, $lvl, $desc, $remuneration, $duration, $location, $enable){
+    public static function createInternship($title, $skills, $lvl, $desc, $remuneration, $duration, $location, $companyName, $enable){
         global $internship;
         if ($internship->findOne(['title' => $title]) == null)
         {
@@ -75,6 +80,7 @@ class Internship{
                 "remuneration" => $remuneration,
                 "duration" => $duration,
                 "location" => $location,
+                "company_name" => $companyName,
                 "enable" => $enable
             ]);
             return 0;
@@ -82,7 +88,6 @@ class Internship{
             return -1;
         }
     }
-    
     public static function deleteInternship($id){
         global $internship;
         $deletedResult = $internship->deleteOne(['_id' => $id]);

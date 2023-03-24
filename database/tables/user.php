@@ -5,7 +5,6 @@ require ('/database/connexion.php');
 class User{
     // accès à la collection
     private $accountArray;
-
     private $id;
     private $firstname;
     private $lastname;
@@ -18,8 +17,7 @@ class User{
     private $type;
     private $wishlist;
 
-    public function __construct($id)
-    {
+    public function __construct($id){
         global $account;
         $this->accountArray = $account->findOne(['_id' => $id]);
         $this->id = $this->accountArray['_id'];
@@ -34,6 +32,7 @@ class User{
         $this->type = $this->accountArray['type'];
         $this->wishlist = $this->accountArray['wishlist'];
     }
+    public function __destruct(){exit;}
     public function get_id(){return $this->id;}
     public function get_firstname(){return $this->firstname;}
     public function get_lastname(){return $this->lastname;}
