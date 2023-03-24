@@ -1,0 +1,15 @@
+.text-row{
+    display: flex;
+    .space{
+        margin-top: 30px;
+    }
+    .text-data{
+        margin-bottom: 15px;
+    }
+}
+
+.offer-example{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
