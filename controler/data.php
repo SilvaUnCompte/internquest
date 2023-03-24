@@ -22,12 +22,12 @@
             }
         }
 
-        public static function checkPasswordEmailCouple($email, $password){
+        public static function checkLogin($email, $password){
             global $account;
             $accountId = Data::verifyEmailExist($email);
             if($accountId!= -1){
                 $passwordTab = $account->findOne(["_id" => $accountId], ['projection' => ["_id" => 0, "password" => 1]]);
-                if(Data::checkPassword($password, $passwordTab['salt'], $passwordTab['hash'])){
+                if(Data::checkPassword($password, $passwordTab["password"]["salt"], $passwordTab["password"]['hash'])){
                     return 0;
                 }else{
                     return -2;
