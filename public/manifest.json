@@ -1,7 +1,7 @@
 {
     "name": "internQuest",
     "short_name": "internQuest",
-    "start_url": "/controler/index.php",
+    "start_url": "/controler/pages/index.php",
     "display": "standalone",
     "background_color": "#424549",
     "theme_color": "#424549",

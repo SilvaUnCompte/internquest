@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2023-03-24 14:03:27
+  from 'C:\xampp\htdocs\www\internquest\public\templates\login.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_641d9f9f75bb94_05424749',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '8a6a5919e15821c81f839e99a9c54b20e35c31d6' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\login.tpl',
+      1 => 1679661957,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_641d9f9f75bb94_05424749 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,7 +34,8 @@
     <link href="/assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/public/styles/generics/header/header.css">
     <link rel="stylesheet" href="/public/styles/generics/footer/footer.css">
-    <title>{$title}</title>
+    <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
 </head>
 
 <link rel="stylesheet" href="/public/styles/login/login.css">
@@ -49,9 +73,14 @@
     </div>
 </section>
 
-<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<?php echo '<script'; ?>
+ type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"><?php echo '</script'; ?>
+>
 
 </body>
 
-</html>
+</html><?php }
+}
