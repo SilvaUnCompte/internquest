@@ -10,6 +10,7 @@ class Internship{
     public $skills;
     public $lvl;
     public $desc;
+    public $contactEmail;
     public $remuneration;
     public $duration;
     public $location;
@@ -24,6 +25,7 @@ class Internship{
         $this->skills = $this->internshipArray['skills'];
         $this->lvl = $this->internshipArray['lvl'];
         $this->desc = $this->internshipArray['desc'];
+        $this->contactEmail = $this->internshipArray['contactEmail'];
         $this->remuneration = $this->internshipArray['remuneration'];
         $this->duration = $this->internshipArray['duration'];
         $this->location = $this->internshipArray['location'];
@@ -35,6 +37,7 @@ class Internship{
     public function get_skills(){return $this->skills;}
     public function get_lvl(){return $this->lvl;}
     public function get_desc(){return $this->desc;}
+    public function get_contactEmail(){return $this->contactEmail;}
     public function get_remuneration(){return $this->remuneration;}
     public function get_duration(){return $this->duration;}
     public function get_location(){return $this->location;}
@@ -46,6 +49,7 @@ class Internship{
     }
     public function set_lvl($string){$this->lvl = $string;}
     public function set_desc($longString){$this->desc = $longString;}
+    public function set_contactEmail($string){$this->companyName = $string;}
     public function set_remuneration($float){$this->remuneration = $float;}
     public function set_duration($int){$this->duration = $int;}
     public function set_location($streetAddress, $city, $postalCode){
