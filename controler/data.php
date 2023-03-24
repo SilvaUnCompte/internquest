@@ -36,5 +36,12 @@
                 return -1;
             }
         }
+
+        public static function researchStudent(){}
+        public static function researchPilot(){}
+        public static function researchCompany(){}
+        public static function research(){}
+        public static function wishlist($id){}
+
     }
 ?>

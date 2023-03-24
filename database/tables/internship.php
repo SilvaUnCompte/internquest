@@ -4,18 +4,18 @@ require ('/database/connexion.php');
 
 class Internship{
     private $internshipArray;
-
-    public $id;
-    public $title;
-    public $skills;
-    public $lvl;
-    public $desc;
-    public $contactEmail;
-    public $remuneration;
-    public $duration;
-    public $location;
-    public $companyName;
-    public $enable;
+    private $id;
+    private $title;
+    private $skills;
+    private $lvl;
+    private $desc;
+    private $contactEmail;
+    private $remuneration;
+    private $duration;
+    private $location;
+    private $companyName;
+    private $applyCount;
+    private $enable;
 
     public function  __construct($id){
         global $internship;
@@ -29,6 +29,7 @@ class Internship{
         $this->remuneration = $this->internshipArray['remuneration'];
         $this->duration = $this->internshipArray['duration'];
         $this->location = $this->internshipArray['location'];
+        $this->applyCount = $this->internshipArray['apply_count'];
         $this->enable = $this->internshipArray['enable'];
     }
     public function __destruct(){exit;}
@@ -42,6 +43,7 @@ class Internship{
     public function get_duration(){return $this->duration;}
     public function get_location(){return $this->location;}
     public function get_companyName(){return $this->companyName;}
+    public function get_applyCount(){return $this->applyCount;}
     public function get_enable(){return $this->enable;}
     public function set_title($string){$this->title = $string;}
     public function set_skills($string){
@@ -56,6 +58,7 @@ class Internship{
         $this->location = ['street_address' => $streetAddress, 'city' => $city, 'postal_code' => $postalCode];
     }
     public function set_companyName($string){$this->companyName = $string;}
+    public function set_applyCount(){$this->applyCount+=1;}
     public function set_enable($bool){$this->enable = $bool;}
     public function updateInternship(){
         global $internship;
@@ -68,6 +71,7 @@ class Internship{
             "duration" => $this->duration,
             "location" => $this->location,
             "company_name" => $this->companyName,
+            "apply_count" => $this->applyCount,
             "enable" => $this->enable
         ]);
     }
@@ -85,6 +89,7 @@ class Internship{
                 "duration" => $duration,
                 "location" => $location,
                 "company_name" => $companyName,
+                "apply_count" => 0,
                 "enable" => $enable
             ]);
             return 0;
