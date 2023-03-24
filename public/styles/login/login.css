@@ -147,6 +147,14 @@ input[type=submit] {
   text-decoration: underline;
 }
 
+.error {
+  color: red;
+  font-size: 1em;
+  margin: 0 0 10px 0;
+  text-align: center;
+  font-weight: 600;
+}
+
 .forget {
   margin: -15px 0 15px;
   font-size: 0.9em;

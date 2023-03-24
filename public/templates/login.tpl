@@ -42,7 +42,14 @@
                 </div>
                 <input type="submit" value="Login">
                 <div class="register">
-                    <p>Don't have an account? <a href="/controler/pages/register.html">Call your pilot</a></p>
+                    <p>Don't have an account? <a href="#">Call your pilot</a></p>
+                    <p class="error">
+                        {if $state == (1)}
+                        Ce mail n'existe pas
+                        {elseif $state == (2)}
+                        Mot de passe incorrect
+                        {/if}
+                    </p>
                 </div>
             </form>
         </div>

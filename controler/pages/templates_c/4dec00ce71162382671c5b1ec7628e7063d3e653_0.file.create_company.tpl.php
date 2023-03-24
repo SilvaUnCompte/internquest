@@ -1,4 +1,30 @@
-{include file='helpers/header.tpl'}
+<?php
+/* Smarty version 4.2.1, created on 2023-03-24 16:33:06
+  from 'C:\xampp\htdocs\www\internquest\public\templates\create_company.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_641dc2b2cf0c08_45427602',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4dec00ce71162382671c5b1ec7628e7063d3e653' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\create_company.tpl',
+      1 => 1679671983,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:helpers/header.tpl' => 1,
+    'file:helpers/footer.tpl' => 1,
+  ),
+),false)) {
+function content_641dc2b2cf0c08_45427602 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 <link rel="stylesheet" href="/public/styles/create/create.css">
 
@@ -40,5 +66,8 @@
     </div>
 </main>
 
-{include file="helpers/footer.tpl"}
-<script src="/public/js/add_field/company.js"></script>
+<?php $_smarty_tpl->_subTemplateRender("file:helpers/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+echo '<script'; ?>
+ src="/public/js/add_field/company.js"><?php echo '</script'; ?>
+><?php }
+}

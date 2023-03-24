@@ -22,8 +22,8 @@ $promo = $_POST['input_promotion'];
 $type = $_POST['input_type'];
 
 //Création de l'utilisateur
-User::createUser($lastname, $firstname, $email, $password, $campus, $promo, $type);
+User::createUser($firstname, $lastname, $email, $password, $campus, $promo, $type);
 
 echo $firstname ." a bien été créé.";
 
-require('pages/index.php');
+header("Location: /controler/pages/index.php");
