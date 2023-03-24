@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-24 13:00:36
+/* Smarty version 4.2.1, created on 2023-03-24 15:00:06
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641d90e44cf3c9_57133648',
+  'unifunc' => 'content_641dace62720d7_72450969',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641d90e44cf3c9_57133648 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641dace62720d7_72450969 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->
