@@ -1,5 +1,19 @@
 .text-row {
+  position: relative;
+  margin-bottom: 20px;
   display: flex;
+}
+.text-row .informations-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.text-row .informations-div .info-col {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 .text-row .space {
   margin-top: 30px;
@@ -7,9 +21,87 @@
 .text-row .text-data {
   margin-bottom: 15px;
 }
+.text-row .info-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wishlist {
+  height: 320px;
+}
 
 .offer-example {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: whitesmoke;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.pagination-div {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (max-width: 400px) {
+  #avatar {
+    display: none;
+  }
+  .offer-example {
+    font-size: 2vh;
+  }
+}
+@media screen and (max-width: 750px) {
+  .text-row .informations-div {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .offer-example {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .wishlist {
+    height: 580px;
+  }
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.buttons .add {
+  width: 80%;
+}
+
+#research-student-div input[type=text] {
+  width: auto;
+}
+
+#student-list {
+  height: 320px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#student-list .studend-card-example {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: whitesmoke;
+  border: 0;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+#student-list .studend-card-example #student-name {
+  margin-left: 5px;
+}
+#student-list .studend-card-example #delete-student {
+  background-color: rgba(0, 0, 0, 0);
+  color: darkred;
+  font-weight: bolder;
+  width: auto;
 }/*# sourceMappingURL=profile.css.map */
