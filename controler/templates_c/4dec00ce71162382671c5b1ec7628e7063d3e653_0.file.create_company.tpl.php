@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-23 15:32:57
+/* Smarty version 4.2.1, created on 2023-03-23 22:19:45
   from 'C:\xampp\htdocs\www\internquest\public\templates\create_company.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641c6319691908_16347017',
+  'unifunc' => 'content_641cc27147a9e4_25811298',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '4dec00ce71162382671c5b1ec7628e7063d3e653' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\create_company.tpl',
-      1 => 1679581976,
+      1 => 1679606248,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_641c6319691908_16347017 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641cc27147a9e4_25811298 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -41,12 +41,12 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
                     </div>
                     <label for="input_localisation">Localisations</label>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="input_street" placeholder="Numéro de rue" required
+                        <input type="text" class="form-control localisation-input" id="input_street" placeholder="Numéro de rue" required
                             pattern="[A-Za-z-]$">
-                        <input type="text" class="form-control" id="input_city" placeholder="Nom de la ville" required
+                        <input type="text" class="form-control localisation-input" id="input_city" placeholder="Nom de la ville" required
                             pattern="[A-Za-z-]$">
-                        <input type="text" class="form-control" id="input_postal" placeholder="Code postal" required
-                            pattern="[A-Za-z-]$">
+                        <input type="text" class="form-control localisation-input" id="input_postal" placeholder="Code postal" required
+                            pattern="[0-9]$">
                         <button type="button" onclick="add_location()">+</button>
                     </div>
                     <div id="entry-address" class="entry-box"></div>
@@ -54,12 +54,13 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
                     <div class="form-group">
                         <input type="text" class="form-control" id="input_sector" placeholder="Secteur d'activité" required
                             pattern="[A-Za-z-]$">
-                        <button type="button" id="add_sector">+</button>
+                        <button type="button" onclick="add_sector()">+</button>
                     </div>
+                    <div id="entry-sector" class="entry-box"></div>
                 </div>
                 <img src="/assets/images/default.png" alt="add user" id="avatar">
             </div>
-            <nav id="form-button"><input type="submit" value="Valider"><input type="reset"></nav>
+            <nav id="form-button"><input type="submit" value="Valider"><input type="reset" onclick="clear_field()"></nav>
 
         </form>
     </div>

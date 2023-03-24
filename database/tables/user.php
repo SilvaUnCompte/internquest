@@ -1,0 +1,125 @@
+<?php
+
+require ('/database/connexion.php');
+
+class User{
+    // accès à la collection
+    private $accountArray;
+
+    private $id;
+    private $firstname;
+    private $lastname;
+    private $email;
+    private $password;
+    private $campus;
+    private $promo;
+    private $logo;
+    private $apply_count;
+    private $type;
+    private $wishlist;
+
+    public function __construct($id)
+    {
+        global $account;
+        $this->accountArray = $account->findOne(['_id' => $id]);
+        $this->id = $this->accountArray['_id'];
+        $this->firstname = $this->accountArray['name']['first'];
+        $this->lastname = $this->accountArray['name']['last'];
+        $this->email = $this->accountArray['email'];
+        $this->password = $this->accountArray['password'];
+        $this->campus = $this->accountArray['campus'];
+        $this->promo = $this->accountArray['promo'];
+        $this->logo = $this->accountArray['logo'];
+        $this->apply_count = $this->accountArray['apply_count'];
+        $this->type = $this->accountArray['type'];
+        $this->wishlist = $this->accountArray['wishlist'];
+    }
+    public function get_id(){return $this->id;}
+    public function get_firstname(){return $this->firstname;}
+    public function get_lastname(){return $this->lastname;}
+    public function get_email(){return $this->email;}
+    public function get_password(){return $this->password;}
+    public function get_campus(){return $this->campus;}
+    public function get_promo(){return $this->promo;}
+    public function get_apply_count(){return $this->apply_count;}
+    public function get_type(){return $this->type;}
+    public function get_wishlist(){return $this->wishlist;}
+
+    public function setFirstName($string){$this->firstname = $string;}
+    public function setLastName($string){$this->lastname = $string;}
+    public function setEmail($string){$this->email = $string;}
+    public function setPassword($hash, $salt){$this->password = ['hash' => $hash, 'salt' => $salt];}
+    public function setCampus($string){$this->campus = $string;}
+    public function setPromo($string){$this->promo = $string;}
+    public function addWishList($id_internship){
+        $wish = $this->isAWish($id_internship);
+        if ($wish == -1)
+        {
+            array_push($this->wishlist, ['id_internship' => $id_internship, 'apply_date' => date('d/m/Y')]);
+            return 0;
+        }else {
+            return -1;
+        }
+    }
+    public function removeWishList($id_internship){
+        $wish = $this->isAWish($id_internship);
+        if ($wish != -1)
+        {
+            unset($this->wishlist[$wish]);
+            return 0;
+        }else {
+            return -1;
+        }
+    }
+    public function isAWish($idInternship){
+        foreach ($this->wishlist as $i => $wish)
+        {
+            if ($wish['id_internship'] == $idInternship){return $i;}
+        }
+        return -1;
+    }
+    public static function createUser($firstname, $lastname, $email, $password, $campus, $promo, $type=0){
+        global $account;
+        if ($account->findOne(['email' => $email]) == null)
+        {
+            $account->insertOne([
+                "_id"=> strval(time())+strval(random_int(1,1000000)),
+                "name"=> [
+                    "first"=> $firstname,
+                    "last"=> $lastname
+                ],
+                "email"=>$email,
+                "password"=> $password,
+                "campus"=> $campus,
+                "promo"=> $promo,
+                "logo"=> "text",
+                "apply_count"=> 0,
+                "type"=> $type,
+                "wishlist"=> []
+            ]);
+            return 0;
+        }else {
+            return -1;
+        }
+    }
+    public function updateUser(){
+        global $account;
+        $account->replaceOne(['_id' => $this->id], [
+            'name' => [
+                'firstname' => $this->firstname,
+                'lastname' => $this->lastname
+            ],
+            'email' => $this->email,
+            'password' => $this->password,
+            'campus' => $this->campus,
+            'promo' => $this->promo,
+            'apply_count' => Count($this->wishlist),
+            'wishlist' => $this->wishlist,
+        ]);
+    }
+    public static function deleteUser($id){
+        global $account;
+        $deletedResult = $account->deleteOne(['_id' => $id]);
+        return $deletedResult->getDeletedCount();
+    }
+}

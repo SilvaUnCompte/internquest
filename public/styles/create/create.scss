@@ -18,6 +18,11 @@ main {
 
 input {
   margin: 3px 5px;
+  border-radius: 10px;
+  border: #dbebf6;
+  padding: 10px;
+  width: 80%;
+  min-width: 300px;
 }
 
 .form-box {
@@ -30,30 +35,18 @@ input {
 }
 
 .form-line {
-  width: 80%;
   min-width: 300px;
   margin: 10px auto;
 }
 
-#avatar {
-  display: block;
-  width: 15%;
-  border-radius: 50%;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
 .form-group {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  justify-content: flex-start;
   margin: 10px 3px 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 .form-col {
-  width: 90%;
+  width: 100%;
 }
 
 .form-row {
@@ -63,7 +56,19 @@ input {
   flex-direction: row;
 }
 
-@media screen and (max-width: 620px) {
+#avatar {
+  display: block;
+  width: 15%;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.localisation-input{
+  min-width: 180px;
+}
+
+@media screen and (max-width: 900px) {
   .form-group {
     display: block;
   }
@@ -73,7 +78,12 @@ input {
   }
 
   #avatar {
-    width: 80%;
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  input{
+    width: 100%;
   }
 }
 
@@ -113,13 +123,8 @@ input[type=submit]:hover {
   background-color: #dbebf6;
 }
 
-#input-name{
-  width: 50%;
-  min-width: 300px;
-}
-
 .entry-box{
-  width: 50%;
+  width: 100%;
   background: transparent;
   border: 2px solid rgb(193, 193, 193);
   border-radius: 5px;
@@ -130,5 +135,11 @@ input[type=submit]:hover {
 .entry-element{
   display: flex;
   flex-direction: row;
+  align-items: center;
   padding: 5px;
+  justify-content: space-between;
+}
+
+.add-button{
+  width: 40px;
 }

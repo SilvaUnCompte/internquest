@@ -15,12 +15,12 @@
                     </div>
                     <label for="input_localisation">Localisations</label>
                     <div class="form-group">
-                        <input type="text" class="form-control" id="input_street" placeholder="Numéro de rue" required
+                        <input type="text" class="form-control localisation-input" id="input_street" placeholder="Numéro de rue" required
                             pattern="[A-Za-z-]$">
-                        <input type="text" class="form-control" id="input_city" placeholder="Nom de la ville" required
+                        <input type="text" class="form-control localisation-input" id="input_city" placeholder="Nom de la ville" required
                             pattern="[A-Za-z-]$">
-                        <input type="text" class="form-control" id="input_postal" placeholder="Code postal" required
-                            pattern="[A-Za-z-]$">
+                        <input type="text" class="form-control localisation-input" id="input_postal" placeholder="Code postal" required
+                            pattern="[0-9]$">
                         <button type="button" onclick="add_location()">+</button>
                     </div>
                     <div id="entry-address" class="entry-box"></div>
@@ -28,12 +28,13 @@
                     <div class="form-group">
                         <input type="text" class="form-control" id="input_sector" placeholder="Secteur d'activité" required
                             pattern="[A-Za-z-]$">
-                        <button type="button" id="add_sector">+</button>
+                        <button type="button" onclick="add_sector()">+</button>
                     </div>
+                    <div id="entry-sector" class="entry-box"></div>
                 </div>
                 <img src="/assets/images/default.png" alt="add user" id="avatar">
             </div>
-            <nav id="form-button"><input type="submit" value="Valider"><input type="reset"></nav>
+            <nav id="form-button"><input type="submit" value="Valider"><input type="reset" onclick="clear_field()"></nav>
 
         </form>
     </div>

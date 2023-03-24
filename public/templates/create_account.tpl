@@ -9,21 +9,21 @@
             <form>
                 <div class="form-row">
                     <div class="form-col">
-                        <label for="input_email">Informations de connexion</label>
+                        <label>Informations de connexion</label>
                         <div class="form-group">
                             <input type="text" class="form-control" id="input_email" placeholder="Email" required
                                 pattern="[^@\s]+@[^@\s]+.[^@\s]">
                             <input type="text" class="form-control" id="input_password" placeholder="Mot de passe"
                                 required pattern="[A-Za-z-]$">
                         </div>
-                        <label for="input_email">Nom prenom</label>
+                        <label>Nom prenom</label>
                         <div class="form-group">
                             <input type="text" class="form-control" id="input_lastname" placeholder="Nom" required
                                 pattern="[A-Za-z-]$">
                             <input type="text" class="form-control" id="input_firstname" placeholder="Prenom" required
                                 pattern="[A-Za-z-]$">
                         </div>
-                        <label for="input_email">Informations d'école</label>
+                        <label>Informations d'école</label>
                         <div class="form-group">
                             <input type="text" class="form-control" id="input_campus" placeholder="Campus" required
                                 pattern="[A-Za-z-]$">
