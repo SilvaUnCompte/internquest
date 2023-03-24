@@ -1,33 +1,36 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 14:15:37
-  from 'C:\xampp\htdocs\www\internquest\public\templates\index.tpl' */
+/* Smarty version 4.2.1, created on 2023-03-24 10:43:56
+  from 'C:\wamp64\www\others\internquest_1\internquest\public\templates\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6419adf989a704_25879323',
+  'unifunc' => 'content_641d7eecde8d17_91561621',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'd0927ba7eed4892e86a7729af90149702e01d8b3' => 
+    '218d8a9c101074f7d3c8dd9ba70341882aab48f2' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\index.tpl',
-      1 => 1679404397,
+      0 => 'C:\\wamp64\\www\\others\\internquest_1\\internquest\\public\\templates\\index.tpl',
+      1 => 1679647166,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
-    'file:helpers/theader.tpl' => 1,
+    'file:helpers/header.tpl' => 1,
     'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6419adf989a704_25879323 (Smarty_Internal_Template $_smarty_tpl) {
-$_smarty_tpl->_subTemplateRender('file:helpers/theader.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+function content_641d7eecde8d17_91561621 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
+<link rel="stylesheet" href="/public/styles/home/parallax.css">
+<link rel="stylesheet" href="/public/styles/home/search.css">
+
     <div class="sample-header">
-        <div class="sample-header-section">
+        <div class="sample-header-section" id="sample-section">
             <h1>Search on more than 1 million offers</h1>
             <form onsubmit="event.unefonction();" role="search">
                 <input id="search-input" type="search" placeholder="Rechercher un stage..." autofocus required />
@@ -85,13 +88,8 @@ $_smarty_tpl->_subTemplateRender('file:helpers/theader.tpl', $_smarty_tpl->cache
         </div>
     </div>
 
-    <?php echo '<script'; ?>
- src="../js/parallax.js"><?php echo '</script'; ?>
->
-
-<?php ob_start();
-$_smarty_tpl->_subTemplateRender("file:helpers/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-$_prefixVariable1 = ob_get_clean();
-echo $_prefixVariable1;
-}
+<?php $_smarty_tpl->_subTemplateRender("file:helpers/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+echo '<script'; ?>
+ src="../public/js/parallax.js"><?php echo '</script'; ?>
+><?php }
 }

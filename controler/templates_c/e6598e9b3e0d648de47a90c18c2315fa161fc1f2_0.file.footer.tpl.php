@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 14:15:37
-  from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\footer.tpl' */
+/* Smarty version 4.2.1, created on 2023-03-24 10:43:57
+  from 'C:\wamp64\www\others\internquest_1\internquest\public\templates\helpers\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6419adf9a4e515_51643597',
+  'unifunc' => 'content_641d7eed0fa666_07666060',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '8a0dadf78df48cd44d54975e0c71d26eb6879739' => 
+    'e6598e9b3e0d648de47a90c18c2315fa161fc1f2' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\footer.tpl',
-      1 => 1679403070,
+      0 => 'C:\\wamp64\\www\\others\\internquest_1\\internquest\\public\\templates\\helpers\\footer.tpl',
+      1 => 1679647166,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6419adf9a4e515_51643597 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d7eed0fa666_07666060 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->
@@ -33,19 +33,19 @@ function content_6419adf9a4e515_51643597 (Smarty_Internal_Template $_smarty_tpl)
 
         <!-- Right -->
         <div id="media_icon_div">
-            <a id="link_media_icon_facebook" href="" class="me-4 text-reset">
+            <a id="link_media_icon_facebook" href="#" aria-label="Facebook" class="me-4 text-reset">
                 <i id="media_icon_facebook" class="fab fa-facebook-f"></i>
             </a>
-            <a id="link_media_icon_twitter" href="" class="me-4 text-reset">
+            <a id="link_media_icon_twitter" href="#" aria-label="Twitter" class="me-4 text-reset">
                 <i id="media_icon_twitter" class="fab fa-twitter"></i>
             </a>
-            <a id="link_media_icon_instagram" href="" class="me-4 text-reset">
+            <a id="link_media_icon_instagram" href="#" aria-label="Insta" class="me-4 text-reset">
                 <i id="media_icon_instagram" class="fab fa-instagram"></i>
             </a>
-            <a id="link_media_icon_linkedin" href="" class="me-4 text-reset">
+            <a id="link_media_icon_linkedin" href="#" aria-label="Linkedin" class="me-4 text-reset">
                 <i id="media_icon_linkedin" class="fab fa-linkedin"></i>
             </a>
-            <a id="link_media_icon_github" href="" class="me-4 text-reset">
+            <a id="link_media_icon_github" href="#" aria-label="github" class="me-4 text-reset">
                 <i id="media_icon_github" class="fab fa-github"></i>
             </a>
         </div>
@@ -78,16 +78,16 @@ function content_6419adf9a4e515_51643597 (Smarty_Internal_Template $_smarty_tpl)
                         Lien utiles
                     </h6>
                     <p>
-                        <a href="#!" class="text-reset">Page d'accueil</a>
+                        <a href="/controler/index.php" class="text-reset">Page d'accueil</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Rechercher</a>
+                        <a href="/controler/research.php" class="text-reset">Rechercher</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Se connecter</a>
+                        <a href="/controler/login.php" class="text-reset">Se connecter</a>
                     </p>
                     <p>
-                        <a href="#!" class="text-reset">Plan du site</a>
+                        <a href="/controler/sitemap.php" class="text-reset">Plan du site</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -121,22 +121,19 @@ function content_6419adf9a4e515_51643597 (Smarty_Internal_Template $_smarty_tpl)
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
         © 2023 Copyright :
-        <a class="text-reset fw-bold" href="http://internship.oneiricforge.com/">InterQuest.com</a>
+        <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InternQuest.com</a>
         |
-        <a class="text-reset fw-bold" href="legal_mentions.html">Mentions légales & conditions d'utilisation</a>
+        <a class="text-reset fw-bold" href="legal_mention.php">Mentions légales & conditions d'utilisation</a>
     </div>
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
 
 <?php echo '<script'; ?>
- src="../../assets/vendors/bootstrap/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
+ src="../assets/vendors/jquery/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="../../assets/vendors/jquery/jquery-3.6.0.min.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="../js/header.js"><?php echo '</script'; ?>
+ src="../public/js/header.js"><?php echo '</script'; ?>
 >
 
 </body>
