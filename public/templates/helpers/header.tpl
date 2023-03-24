@@ -20,7 +20,7 @@
 
   <header id="native-header">
     <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
-      <a href="/controler/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo" loading="lazy"
+      <a href="/controler/pages/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo" loading="lazy"
           width="300" height="77.2"></a>
       <div id="button_div_header">
         <!--<button id="register_button" type="button" class="btn btn-primary" href="javascript:void(0)"><span>S'inscrire</span></button>-->
@@ -33,10 +33,10 @@
     <nav id="second_header">
       <ul class="navbar-nav me-auto mb-2 mb-xl-0">
         <li class="nav-item">
-          <a id="nav-accueil" class="nav-link active" aria-current="page" href="/controler/index.php">Accueil</a>
+          <a id="nav-accueil" class="nav-link active" aria-current="page" href="/controler/pages/index.php">Accueil</a>
         </li>
         <li id="nav-recherche" class="nav-item">
-          <a class="nav-link" href="/controler/research.php">Rechercher</a>
+          <a class="nav-link" href="/controler/pages/research.php">Rechercher</a>
         </li>
       </ul>
       <ul class="navbar-nav mb-2 mb-xl-0">

@@ -55,16 +55,16 @@
                         Lien utiles
                     </h6>
                     <p>
-                        <a href="/controler/index.php" class="text-reset">Page d'accueil</a>
+                        <a href="/controler/pages/index.php" class="text-reset">Page d'accueil</a>
                     </p>
                     <p>
-                        <a href="/controler/research.php" class="text-reset">Rechercher</a>
+                        <a href="/controler/pages/research.php" class="text-reset">Rechercher</a>
                     </p>
                     <p>
-                        <a href="/controler/login.php" class="text-reset">Se connecter</a>
+                        <a href="/controler/pages/login.php" class="text-reset">Se connecter</a>
                     </p>
                     <p>
-                        <a href="/controler/sitemap.php" class="text-reset">Plan du site</a>
+                        <a href="/controler/pages/sitemap.php" class="text-reset">Plan du site</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -100,14 +100,14 @@
         © 2023 Copyright :
         <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InternQuest.com</a>
         |
-        <a class="text-reset fw-bold" href="legal_mention.php">Mentions légales & conditions d'utilisation</a>
+        <a class="text-reset fw-bold" href="/controler/pages/legal_mention.php">Mentions légales & conditions d'utilisation</a>
     </div>
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
 
-<script src="../assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-<script src="../public/js/header.js"></script>
+<script src="/assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+<script src="/public/js/header.js"></script>
 
 </body>
 

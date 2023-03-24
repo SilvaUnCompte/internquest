@@ -63,4 +63,4 @@
     </div>
 
 {include file="helpers/footer.tpl"}
-<script src="../public/js/parallax.js"></script>
+<script src="/public/js/parallax.js"></script>
