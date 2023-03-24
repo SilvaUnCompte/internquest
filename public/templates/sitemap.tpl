@@ -6,18 +6,18 @@
 <div id="basic-core">
     <h2>Site Map</h2>
     <ul>
-        <li><a href="/controler/index.php">Home</a></li>
-        <li><a href="/controler/#about.html">About</a></li>
-        <li><a href="/controler/sitemap.html">Site Map</a></li>
-        <li><a href="/controler/login.html">Connexion</a></li>
-        <li><a href="/controler/register.html">Account creation page</a></li>
+        <li><a href="/controler/pages/index.php">Home</a></li>
+        <li><a href="/controler/pages/#about.html">About</a></li>
+        <li><a href="/controler/pages/sitemap.html">Site Map</a></li>
+        <li><a href="/controler/pages/login.html">Connexion</a></li>
+        <li><a href="/controler/pages/register.html">Account creation page</a></li>
         <li><a href="#personal-page.html">Personal page</a></li>
-        <li><a href="/controler/search.html">Search page</a></li>
+        <li><a href="/controler/pages/search.html">Search page</a></li>
     </ul>
     <h2>Student area</h2>
     <ul>
-        <li><a href="/controler/#wish-list.html">Wish list page</a></li>
-        <li><a href="/controler/#follow-apply.html">Follow-up application page</a></li>
+        <li><a href="/controler/pages/#wish-list.html">Wish list page</a></li>
+        <li><a href="/controler/pages/#follow-apply.html">Follow-up application page</a></li>
     </ul>
     <h2>Tutor area</h2>
     <ul>

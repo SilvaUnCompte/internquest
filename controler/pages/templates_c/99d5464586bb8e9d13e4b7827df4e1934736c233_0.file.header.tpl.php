@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2023-03-24 10:30:54
+  from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\header.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_641d6dcea7dc16_01117302',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '99d5464586bb8e9d13e4b7827df4e1934736c233' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\header.tpl',
+      1 => 1679650209,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_641d6dcea7dc16_01117302 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,7 +36,8 @@
   <link href="/assets/vendors/fontawesome/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/public/styles/generics/header/header.css">
   <link rel="stylesheet" href="/public/styles/generics/footer/footer.css">
-  <title>{$title}</title>
+  <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
+</title>
 </head>
 
 <body>
@@ -45,4 +69,5 @@
         </li>
       </ul>
     </nav>
-</header>
+</header><?php }
+}

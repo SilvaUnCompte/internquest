@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-23 21:20:46
+/* Smarty version 4.2.1, created on 2023-03-24 11:18:10
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641cb49ecd1ee9_68178785',
+  'unifunc' => 'content_641d78e299f1e0_36192127',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a0dadf78df48cd44d54975e0c71d26eb6879739' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\footer.tpl',
-      1 => 1679599718,
+      1 => 1679650182,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641cb49ecd1ee9_68178785 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d78e299f1e0_36192127 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Footer -->
 <footer class="text-center text-lg-start bg-dark text-muted">
     <!-- Section: Social media -->
@@ -78,16 +78,16 @@ function content_641cb49ecd1ee9_68178785 (Smarty_Internal_Template $_smarty_tpl)
                         Lien utiles
                     </h6>
                     <p>
-                        <a href="/controler/index.php" class="text-reset">Page d'accueil</a>
+                        <a href="/controler/pages/index.php" class="text-reset">Page d'accueil</a>
                     </p>
                     <p>
-                        <a href="/controler/research.php" class="text-reset">Rechercher</a>
+                        <a href="/controler/pages/research.php" class="text-reset">Rechercher</a>
                     </p>
                     <p>
-                        <a href="/controler/login.php" class="text-reset">Se connecter</a>
+                        <a href="/controler/pages/login.php" class="text-reset">Se connecter</a>
                     </p>
                     <p>
-                        <a href="/controler/sitemap.php" class="text-reset">Plan du site</a>
+                        <a href="/controler/pages/sitemap.php" class="text-reset">Plan du site</a>
                     </p>
                 </div>
                 <!-- Grid column -->
@@ -123,17 +123,17 @@ function content_641cb49ecd1ee9_68178785 (Smarty_Internal_Template $_smarty_tpl)
         © 2023 Copyright :
         <a class="text-reset fw-bold" href="https://internquest.oneiricforge.com/">InternQuest.com</a>
         |
-        <a class="text-reset fw-bold" href="legal_mention.php">Mentions légales & conditions d'utilisation</a>
+        <a class="text-reset fw-bold" href="/controler/pages/legal_mention.php">Mentions légales & conditions d'utilisation</a>
     </div>
     <!-- Copyright -->
 </footer>
 <!-- Footer -->
 
 <?php echo '<script'; ?>
- src="../assets/vendors/jquery/jquery-3.6.0.min.js"><?php echo '</script'; ?>
+ src="/assets/vendors/jquery/jquery-3.6.0.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
- src="../public/js/header.js"><?php echo '</script'; ?>
+ src="/public/js/header.js"><?php echo '</script'; ?>
 >
 
 </body>

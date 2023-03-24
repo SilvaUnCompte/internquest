@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-21 22:14:48
+/* Smarty version 4.2.1, created on 2023-03-24 10:30:56
   from 'C:\xampp\htdocs\www\internquest\public\templates\card.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641a1e48f1df97_19625716',
+  'unifunc' => 'content_641d6dd0ad82c6_45691588',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641a1e48f1df97_19625716 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d6dd0ad82c6_45691588 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="wrapper"> 
     <div class="header header_home">Student Name</div>
     <div class="content content_home">

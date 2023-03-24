@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="/public/styles/login/login.css">
 
 
-<a id="home" href="/controler/index.php">
+<a id="home" href="/controler/pages/index.php">
     <ion-icon name="home-outline" id="home-outline"></ion-icon>
     <ion-icon name="home" id="home-full"></ion-icon>
 </a>
@@ -42,7 +42,7 @@
                 </div>
                 <input type="submit" value="Login">
                 <div class="register">
-                    <p>Don't have an account? <a href="/controler/register.html">Call your pilot</a></p>
+                    <p>Don't have an account? <a href="/controler/pages/register.html">Call your pilot</a></p>
                 </div>
             </form>
         </div>

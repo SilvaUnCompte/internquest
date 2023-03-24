@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-22 16:37:43
+/* Smarty version 4.2.1, created on 2023-03-24 10:31:09
   from 'C:\xampp\htdocs\www\internquest\public\templates\sitemap.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641b20c72dc1f0_59315474',
+  'unifunc' => 'content_641d6ddd761594_61596603',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '84a7b6f5772ec28fcbdb97c9a7f788cc058f960c' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\sitemap.tpl',
-      1 => 1679499462,
+      1 => 1679650248,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_641b20c72dc1f0_59315474 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d6ddd761594_61596603 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -32,18 +32,18 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
 <div id="basic-core">
     <h2>Site Map</h2>
     <ul>
-        <li><a href="/controler/index.php">Home</a></li>
-        <li><a href="/controler/#about.html">About</a></li>
-        <li><a href="/controler/sitemap.html">Site Map</a></li>
-        <li><a href="/controler/login.html">Connexion</a></li>
-        <li><a href="/controler/register.html">Account creation page</a></li>
+        <li><a href="/controler/pages/index.php">Home</a></li>
+        <li><a href="/controler/pages/#about.html">About</a></li>
+        <li><a href="/controler/pages/sitemap.html">Site Map</a></li>
+        <li><a href="/controler/pages/login.html">Connexion</a></li>
+        <li><a href="/controler/pages/register.html">Account creation page</a></li>
         <li><a href="#personal-page.html">Personal page</a></li>
-        <li><a href="/controler/search.html">Search page</a></li>
+        <li><a href="/controler/pages/search.html">Search page</a></li>
     </ul>
     <h2>Student area</h2>
     <ul>
-        <li><a href="/controler/#wish-list.html">Wish list page</a></li>
-        <li><a href="/controler/#follow-apply.html">Follow-up application page</a></li>
+        <li><a href="/controler/pages/#wish-list.html">Wish list page</a></li>
+        <li><a href="/controler/pages/#follow-apply.html">Follow-up application page</a></li>
     </ul>
     <h2>Tutor area</h2>
     <ul>

@@ -1,5 +1,5 @@
 <?php
-    require ("/assets/vendors/mongodb/vendor/autoload.php");
+    require ($_SERVER['DOCUMENT_ROOT'].'/assets/vendors/mongodb/vendor/autoload.php');
 
     $connection_chain = 'mongodb+srv://WilliamM:bP1j1rvVAGjBoGKQ@unjolienom.43m3hif.mongodb.net/test';
     $client = new MongoDB\Client($connection_chain);

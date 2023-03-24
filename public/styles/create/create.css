@@ -137,4 +137,8 @@ input[type=submit]:hover {
 
 .add-button {
   width: 40px;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=create.css.map */

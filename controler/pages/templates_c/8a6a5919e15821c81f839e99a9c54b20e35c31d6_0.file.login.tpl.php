@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-22 16:36:27
+/* Smarty version 4.2.1, created on 2023-03-24 10:30:58
   from 'C:\xampp\htdocs\www\internquest\public\templates\login.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641b207bd1f567_70796083',
+  'unifunc' => 'content_641d6dd2c7d507_73995737',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '8a6a5919e15821c81f839e99a9c54b20e35c31d6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\login.tpl',
-      1 => 1679499386,
+      1 => 1679650230,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641b207bd1f567_70796083 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641d6dd2c7d507_73995737 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -41,7 +41,7 @@ function content_641b207bd1f567_70796083 (Smarty_Internal_Template $_smarty_tpl)
 <link rel="stylesheet" href="/public/styles/login/login.css">
 
 
-<a id="home" href="/controler/index.php">
+<a id="home" href="/controler/pages/index.php">
     <ion-icon name="home-outline" id="home-outline"></ion-icon>
     <ion-icon name="home" id="home-full"></ion-icon>
 </a>
@@ -66,7 +66,7 @@ function content_641b207bd1f567_70796083 (Smarty_Internal_Template $_smarty_tpl)
                 </div>
                 <input type="submit" value="Login">
                 <div class="register">
-                    <p>Don't have an account? <a href="/controler/register.html">Call your pilot</a></p>
+                    <p>Don't have an account? <a href="/controler/pages/register.html">Call your pilot</a></p>
                 </div>
             </form>
         </div>
