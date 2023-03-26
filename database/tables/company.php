@@ -4,6 +4,8 @@ require ($_SERVER['DOCUMENT_ROOT'].'/database/connexion.php');
 
 class Company{
 
+    public $companyArray;
+
     public $id;
     public $name;
     public $logo;
@@ -14,6 +16,21 @@ class Company{
     public $internships;
     public $locations;
     public $grades;
+
+    public function __construct($id){
+        global $company;
+        $this->companyArray = $company->findOne(['_id' => $id]);
+        $this->id = $this->companyArray['_id'];
+        $this->name = $this->companyArray['name'];
+        $this->logo = $this->companyArray['logo'];
+        $this->desc = $this->companyArray['desc'];
+        $this->visible = $this->companyArray['visible'];
+        $this->sectors = $this->companyArray['sectors'];
+        $this->pilotTrust = $this->companyArray['pilotTrust'];
+        $this->internships = $this->companyArray['internships'];
+        $this->locations = $this->companyArray['locations'];
+        $this->grades = $this->companyArray['grades'];
+    }
 
     public function get_id(){return $this->id;}
     public function get_name(){return $this->name;}
