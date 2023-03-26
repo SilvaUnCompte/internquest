@@ -24,6 +24,4 @@ $type = $_POST['input_type'];
 //Création de l'utilisateur
 User::createUser($firstname, $lastname, $email, $password, $campus, $promo, $type);
 
-echo $firstname ." a bien été créé.";
-
-header("Location: /controler/pages/index.php");
+header("Location: /controler/pages/personal_page.php");

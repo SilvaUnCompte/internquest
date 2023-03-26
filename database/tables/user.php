@@ -43,7 +43,6 @@ class User{
     public function get_apply_count(){return $this->apply_count;}
     public function get_type(){return $this->type;}
     public function get_wishlist(){return $this->wishlist;}
-
     public function setFirstName($string){$this->firstname = $string;}
     public function setLastName($string){$this->lastname = $string;}
     public function setEmail($string){$this->email = $string;}
@@ -105,15 +104,16 @@ class User{
         global $account;
         $account->replaceOne(['_id' => $this->id], [
             'name' => [
-                'firstname' => $this->firstname,
-                'lastname' => $this->lastname
+                'first' => $this->firstname,
+                'last' => $this->lastname
             ],
             'email' => $this->email,
             'password' => $this->password,
             'campus' => $this->campus,
             'promo' => $this->promo,
-            'logo' => $this->logo,
+            'logo' => "logo",
             'apply_count' => Count($this->wishlist),
+            "type"=> $this->type,
             'wishlist' => $this->wishlist,
         ]);
     }
