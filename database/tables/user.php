@@ -12,7 +12,6 @@ class User{
     private $password;
     private $campus;
     private $promo;
-    private $logo;
     private $apply_count;
     private $type;
     private $wishlist;
@@ -27,7 +26,6 @@ class User{
         $this->password = $this->accountArray['password'];
         $this->campus = $this->accountArray['campus'];
         $this->promo = $this->accountArray['promo'];
-        $this->logo = $this->accountArray['logo'];
         $this->apply_count = $this->accountArray['apply_count'];
         $this->type = $this->accountArray['type'];
         $this->wishlist = $this->accountArray['wishlist'];
@@ -90,7 +88,6 @@ class User{
                 "password"=> $password,
                 "campus"=> $campus,
                 "promo"=> $promo,
-                "logo"=> "text",
                 "apply_count"=> 0,
                 "type"=> $type,
                 "wishlist"=> []
@@ -111,7 +108,6 @@ class User{
             'password' => $this->password,
             'campus' => $this->campus,
             'promo' => $this->promo,
-            'logo' => "logo",
             'apply_count' => Count($this->wishlist),
             "type"=> $this->type,
             'wishlist' => $this->wishlist,
