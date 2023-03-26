@@ -38,15 +38,23 @@
             }
         }
 
-        public static function researchStudent(){
-
+        public static function researchStudent($text){
+            global $account;
+            $resultsTab = $account->find(['type' => 0],['projection' => ['_id' => 1, 'name' => 1]]);
+            $tab = array();
+            foreach($resultsTab as $student){
+                if(str_contains(strtolower($student['name']['first']).' '.strtolower($student['name']['last']), strtolower($text))){
+                    array_push($tab, $student);
+                }
+            }
+            return $tab;
         }
         public static function researchPilot($text){
             global $account;
             $resultsTab = $account->find(['type' => 1],['projection' => ['_id' => 1, 'name' => 1]]);
             $tab = array();
             foreach($resultsTab as $pilot){
-                if(str_contains(strtolower($pilot['name']['first']).' '.strtolower($pilot['name']['last']), $text)){
+                if(str_contains(strtolower($pilot['name']['first']).' '.strtolower($pilot['name']['last']), strtolower($text))){
                     array_push($tab, $pilot);
                 }
             }
