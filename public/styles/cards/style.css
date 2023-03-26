@@ -5,23 +5,23 @@
   position: relative;
   
   width: 90%;
-  height: 150px;
+  height: 170px;
   
   background: hsl(0,0%,95%);
   box-shadow: 1px 1px 10px 3px rgba(0,0,0,.3);
   border: 0;
-  border-radius: 33px 0px 0px 33px;
+  border-radius: 25px 0px 0px 25px;
 }
 
 /*************/
 .header{
   position: absolute;
   width: max-content;
-  font-size: 0.95833rem;
+  font-size: 1rem;
 
   white-space: nowrap;
   
-  top: 25%;
+  top: 15%;
   left: 7%;
 }
 
@@ -40,10 +40,10 @@
 /*************/
 .content {
   position: absolute;
-  font-size: 0.50833rem;
+  font-size: 0.8rem;
   width: 40%;
   
-  top: 45%;
+  top: 35%;
   left: 7%;
 }
 .image {
@@ -51,10 +51,11 @@
   top: 0;
   right: 0;
 
-  width: 50%;
+  width: auto;
   height: 100%;
-  background-image: url(https://images.unsplash.com/photo-1580707578919-892eb22db615?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbiUyMHBvcnRyYWl0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60);
   
   background-repeat: no-repeat;
   background-size: cover;
+
+  transform: scaleX(-1);
 }
