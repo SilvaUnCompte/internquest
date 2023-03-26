@@ -54,7 +54,7 @@ class User{
         $wish = $this->isAWish($id_internship);
         if ($wish == -1)
         {
-            array_push($this->wishlist, ['id_internship' => $id_internship, 'apply_date' => date('d/m/Y')]);
+            $this->wishlist[] = ['id_internship' => $id_internship, 'apply_date' => date('d/m/Y')];
             return 0;
         }else {
             return -1;

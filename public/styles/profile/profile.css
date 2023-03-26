@@ -10,7 +10,7 @@
 }
 .text-row .informations-div .info-col {
   margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -24,10 +24,6 @@
 .text-row .info-div {
   display: flex;
   flex-direction: column;
-}
-
-.wishlist {
-  height: 320px;
 }
 
 .offer-example {
@@ -47,9 +43,6 @@
 }
 
 @media screen and (max-width: 400px) {
-  #avatar {
-    display: none;
-  }
   .offer-example {
     font-size: 2vh;
   }
@@ -63,10 +56,26 @@
     flex-direction: column;
     align-items: flex-start;
   }
-  .wishlist {
-    height: 580px;
-  }
 }
+button {
+  width: 120px;
+  padding: 7px;
+  margin: 10px 10px;
+  background-color: #ffffff;
+  color: #8f8f8f;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  top: 0;
+}
+
+#logout-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
 .buttons {
   display: flex;
   flex-direction: column;

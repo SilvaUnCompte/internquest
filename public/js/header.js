@@ -21,8 +21,8 @@ function header_scroll() {
         }
         else {
             second_header.style.opacity = 1;
-            nav_click[0].href = "/public/templates/index.php";
-            nav_click[1].href = "/public/templates/research.php";
+            nav_click[0].href = "/controler/pages/index.php";
+            nav_click[1].href = "/controler/pages/research.php";
         }
     }
 }

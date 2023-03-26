@@ -1,4 +1,30 @@
-{include file='helpers/header.tpl'}
+<?php
+/* Smarty version 4.2.1, created on 2023-03-26 11:59:22
+  from 'C:\xampp\htdocs\www\internquest\public\templates\legal_mention.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_6420177af37f51_58844624',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '4bc368fce3779252106182e79daeb62d460a1586' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\legal_mention.tpl',
+      1 => 1679824762,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:helpers/header.tpl' => 1,
+    'file:helpers/footer.tpl' => 1,
+  ),
+),false)) {
+function content_6420177af37f51_58844624 (Smarty_Internal_Template $_smarty_tpl) {
+$_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
 
 <link rel="stylesheet" href="/public/styles/sitemap/sitemap.css">
 
@@ -214,5 +240,8 @@
 
 </div>
 
-{include file="helpers/footer.tpl"}
-<script src="../public/js/parallax.js"></script>
+<?php $_smarty_tpl->_subTemplateRender("file:helpers/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+echo '<script'; ?>
+ src="../public/js/parallax.js"><?php echo '</script'; ?>
+><?php }
+}
