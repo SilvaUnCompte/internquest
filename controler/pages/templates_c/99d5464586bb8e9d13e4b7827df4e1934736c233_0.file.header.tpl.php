@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-24 16:16:37
+/* Smarty version 4.2.1, created on 2023-03-24 18:44:39
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_641dbed5560b65_20327415',
+  'unifunc' => 'content_641de187543ab5_84440682',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99d5464586bb8e9d13e4b7827df4e1934736c233' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\header.tpl',
-      1 => 1679670952,
+      1 => 1679679716,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_641dbed5560b65_20327415 (Smarty_Internal_Template $_smarty_tpl) {
+function content_641de187543ab5_84440682 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -47,26 +47,25 @@ function content_641dbed5560b65_20327415 (Smarty_Internal_Template $_smarty_tpl)
       <a href="/controler/pages/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
           loading="lazy" width="300" height="77.2"></a>
       <div id="button_div_header">
-        
 
         <?php if (session_status() !== PHP_SESSION_ACTIVE) {?>
           <?php echo session_start();?>
 
         <?php }?>
 
-
         <?php if ((isset($_SESSION['firstname']))) {?>
-          <a id="login_button" class="btn btn-primary" href="/controler/logout.php"> <?php echo $_SESSION['firstname'];?>
+          <a id="login_button" class="btn btn-primary" href="/controler/pages/personal_page.php">
+            <?php echo $_SESSION['firstname'];?>
  <?php echo $_SESSION['lastname'];?>
 </a>
+            <a href="/controler/pages/personal_page.php"><img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50"
+          loading="lazy"></a>
         <?php } else { ?>
           <a id="login_button" class="btn btn-primary" href="/controler/pages/login.php">Se connecter</a>
-          
+          <a href="/controler/pages/login.php"><img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50"
+          loading="lazy"></a>
         <?php }?>
-        <img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50"
-            loading="lazy">
-
-
+        
       </div>
     </nav>
 

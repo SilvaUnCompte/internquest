@@ -23,23 +23,22 @@
       <a href="/controler/pages/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
           loading="lazy" width="300" height="77.2"></a>
       <div id="button_div_header">
-        
 
         {if session_status() !== PHP_SESSION_ACTIVE}
           {session_start()}
         {/if}
 
-
         {if isset($smarty.session.firstname)}
-          <a id="login_button" class="btn btn-primary" href="/controler/logout.php"> {$smarty.session.firstname} {$smarty.session.lastname}</a>
+          <a id="login_button" class="btn btn-primary" href="/controler/pages/personal_page.php">
+            {$smarty.session.firstname} {$smarty.session.lastname}</a>
+            <a href="/controler/pages/personal_page.php"><img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50"
+          loading="lazy"></a>
         {else}
           <a id="login_button" class="btn btn-primary" href="/controler/pages/login.php">Se connecter</a>
-          
+          <a href="/controler/pages/login.php"><img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50"
+          loading="lazy"></a>
         {/if}
-        <img id="account_avatar" src="/assets/images/avatar.svg" alt="Avatar image" width="50" height="50"
-            loading="lazy">
-
-
+        
       </div>
     </nav>
 
