@@ -50,6 +50,7 @@
                 </div>
             </div>
         </div>
+        
         {if $smarty.session.type == (0)}
             {include file="personal_page/student.tpl"}
         {else}
