@@ -47,6 +47,7 @@ class User{
     public function setPassword($hash, $salt){$this->password = ['hash' => $hash, 'salt' => $salt];}
     public function setCampus($string){$this->campus = $string;}
     public function setPromo($string){$this->promo = $string;}
+    public function setType($int){$this->type = $int;}
     public function addWishList($id_internship){
         $wish = $this->isAWish($id_internship);
         if ($wish == -1)
@@ -115,7 +116,8 @@ class User{
     }
     public static function deleteUser($id){
         global $account;
-        $deletedResult = $account->deleteOne(['_id' => $id]);
-        return $deletedResult->getDeletedCount();
+        $user = new User($id);
+        $user->setType(-1);
+        $user->updateUser();
     }
 }
