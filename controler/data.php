@@ -41,21 +41,24 @@
         public static function researchStudent(){}
         public static function researchPilot(){}
         public static function researchCompany(){}
-        public static function researchOffer($title){
+        public static function researchOffer($text){
             global $internship;
-            $resultsTab = $internship->find([],['projection' => ['_id' => 0, 'title' => 1, 'lvl' => 1, 'duration' => 1, 'company_name' => 1, 'contactEmail' => 1, 'apply_count' => 1]]);
-            
-            echo '<div class="wrapper">';
-                echo '<div class="header header_home unselectable">Intitulé du stage</div>';
-                echo '<div class="content content_home">';
-                    echo '<p class="unselectable">Niveau d\'étude</p>';
-                    echo '<p class="unselectable">N mois</p>';
-                    echo '<p class="unselectable">Nom de l\'entreprise</p>';
-                    echo '<p class="unselectable"><a href="mailto:">Email de contact</a></p><br>';
-                    echo '<p class="unselectable">♡ 999</p>';
-                echo '</div>';
-                echo '<img class="image" src="/assets/images/corner.png" alt=\'corner-image\'>';
-            echo '</div>';
+            $resultsTab = $internship->find([],['projection' => ['_id' => 1, 'title' => 1, 'lvl' => 1, 'duration' => 1, 'company_name' => 1, 'contactEmail' => 1, 'apply_count' => 1, 'enable' => 1]]);
+            foreach($resultsTab as $doc){
+                if(str_contains($doc['title'],$text) && $doc['enable']){
+                    echo '<div class="wrapper" value="'.$doc['_id'].'">';
+                        echo '<div class="header header_home unselectable">'.$doc['title'].'</div>';
+                        echo '<div class="content content_home">';
+                            echo '<p class="unselectable">'.$doc['lvl'].'</p>';
+                            echo '<p class="unselectable">'.$doc['duration'].'</p>';
+                            echo '<p class="unselectable">'.$doc['company_name'].'</p>';
+                            echo '<p class="unselectable"><a href="mailto:'.$doc['contactEmail'].'">'.$doc['contactEmail'].'</a></p><br>';
+                            echo '<p class="unselectable">♡ '.$doc['apply_count'].'</p>';
+                        echo '</div>';
+                        echo '<img class="image" src="/assets/images/corner.png" alt=\'corner-image\'>';
+                    echo '</div>';
+                }
+            }
         }
         public static function get_researchOffersFilters($type){
             global $internship;
@@ -183,18 +186,5 @@
                 }
             }
         }
-        public static function researchOffers($title, $filters){
-            global $internship;
-            $resultsTab = $internship->find($filters);
-            $tab = array();
-            foreach($resultsTab as $element){
-                if(str_contains($element['title'], $title)){
-                    array_push($tab, $element);
-                }
-            }
-            return Count($tab) != 0 ? $tab : -1;
-        }
-        public static function wishlist($id){}
-
     }
 ?>
