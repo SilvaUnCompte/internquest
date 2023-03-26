@@ -50,27 +50,34 @@
             <div id="search_and_results_column">
                 <div>
                     <div id="search_row">
+                        <?php $var = $_GET['typeRecherche']; ?>
                         <form id="search_bar" method="post">
                             <button id="show_filters_button" class="btn_model_animated" type="button">Filtres</button>
-                            <input type="search" placeholder="Search">
+                            <input type="search" placeholder="Search" name="research-input">
                             <button type="submit" class="btn_model_animated">Search</button>
                         </form>
                     </div>
                     <div id="results_row" class="row">
                         <div id="card_list">
-                            
+                            <?php
+                                if(isset($_POST['research-input'])){
+                                    if($_GET['typeRecherche'] == 'offer'){
+                                        Data::researchOffer(htmlspecialchars($_POST['research-input']));
+                                    }elseif($_GET['typeRecherche'] == 'company'){
+                                        Data::researchCompany(htmlspecialchars($_POST['research-input']));
+                                    }
+                                }
+                            ?>
                         </div>
                         <div id="card_info_showing">
                             <div id="title">
-                                <h1>Intitulé du stage</h1>
+                                <h1 id="title">Intitulé du stage</h1>
                             </div>
                             <div id="data">
                                 <ul>
-                                    <li><b>Niveau d'étude :</b></li>
-                                    <li><b>Durée :</b></li>
-                                    <li><b>Nom de l'entreprise :</b></li>
-                                    <li><b>Email de contact :</b></li>
-                                    <li><b>Description :</b></li>
+                                    <div id="presentation">
+
+                                    </div>
                                 </ul>
                             </div>
                         </div>
