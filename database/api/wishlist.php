@@ -17,9 +17,10 @@ $currentUser = new User($_SESSION['id']);
 $curentPage = $_GET['page'] ?? 0;
 
 for ($i = 0; $i < 5; $i++) {
+    echo $currentUser->get_wishlist()[5*$curentPage + $i]['id_internship'];
     $curentIntern = new Internship($currentUser->get_wishlist()[5*$curentPage + $i]['id_internship']);
-    $wishlist = array();
-    array_push($wishlist,[
+    
+    $wishlist[] = [
         'id' => $curentIntern->get_id(),
         'title' => $curentIntern->get_title(),
         'lvl' => $curentIntern->get_lvl(),
@@ -31,9 +32,7 @@ for ($i = 0; $i < 5; $i++) {
         'companyName' => $curentIntern->get_companyName(),
         'applyCount' => $curentIntern->get_applyCount(),
         'enable' => $curentIntern->get_enable()
-    ]);
-
-    echo json_encode($wishlist);
+    ];
 }
 
 echo json_encode($wishlist);
