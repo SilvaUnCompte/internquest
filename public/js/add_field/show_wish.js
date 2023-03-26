@@ -7,6 +7,8 @@ function refreashWishData() {
     xhr.onload = () => {
         if (xhr.status == 200) {
             rawJSON = JSON.parse(xhr.responseText);
+            console.log(rawJSON);
+            
             wp_total = Math.ceil(rawJSON[0].wishCount / 5);
             data = rawJSON[1].wishlist;
 

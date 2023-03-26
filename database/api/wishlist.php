@@ -1,8 +1,10 @@
 <?php
 header('Content-Type: application/json');
 require($_SERVER['DOCUMENT_ROOT'] . '/database/tables/user.php');
+require($_SERVER['DOCUMENT_ROOT'] . '/database/tables/internship.php');
 
 
+// Securité
 if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
 if (!isset($_SESSION['id'])) {
@@ -10,16 +12,31 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
+
 $currentUser = new User($_SESSION['id']);
 $curentPage = $_GET['page'] ?? 0;
 
-// echo Count($currentUser->get_wishlist());
-// echo json_encode($currentUser->get_wishlist());
+for ($i = 0; $i < 5; $i++) {
+    $curentIntern = new Internship($currentUser->get_wishlist()[5*$curentPage + $i]['id_internship']);
+    $wishlist = array();
+    array_push($wishlist,[
+        'id' => $curentIntern->get_id(),
+        'title' => $curentIntern->get_title(),
+        'lvl' => $curentIntern->get_lvl(),
+        'desc' => $curentIntern->get_desc(),
+        'contactEmail' => $curentIntern->get_contactEmail(),
+        'remuneration' => $curentIntern->get_remuneration(),
+        'duration' => $curentIntern->get_duration(),
+        'location' => $curentIntern->get_location(),
+        'companyName' => $curentIntern->get_companyName(),
+        'applyCount' => $curentIntern->get_applyCount(),
+        'enable' => $curentIntern->get_enable()
+    ]);
 
-
-for ($i = 0; $i < count($currentUser->get_wishlist()); $i++) {
-    $wishlist[] = $currentUser->get_wishlist()[$i];
+    echo json_encode($wishlist);
 }
+
+echo json_encode($wishlist);
 
 $result[0] = ['wishCount' => count($currentUser->get_wishlist())];
 $result[1] = ['wishlist' => array_slice($wishlist, $curentPage * 5, 5)];

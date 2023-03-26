@@ -1,6 +1,6 @@
 <?php
 
-require ('/database/connexion.php');
+require ($_SERVER['DOCUMENT_ROOT'].'/database/connexion.php');
 
 class Company{
 

@@ -1,6 +1,6 @@
 <?php
 
-require ('/database/connexion.php');
+require ($_SERVER['DOCUMENT_ROOT'].'/database/connexion.php');
 
 class Internship{
     private $internshipArray;
@@ -67,6 +67,7 @@ class Internship{
             "skills" => $this->skills,
             "lvl" => $this->lvl,
             "desc" => $this->desc,
+            "contactEmail" => $this->contactEmail,
             "remuneration" => $this->remuneration,
             "duration" => $this->duration,
             "location" => $this->location,
@@ -75,9 +76,9 @@ class Internship{
             "enable" => $this->enable
         ]);
     }
-    public static function createInternship($title, $skills, $lvl, $desc, $remuneration, $duration, $location, $companyName, $enable){
+    public static function createInternship($title, $skills, $lvl, $desc, $contactEmail, $remuneration, $duration, $location, $companyName, $enable){
         global $internship;
-        if ($internship->findOne(['title' => $title]) == null)
+        if ($internship->findOne(['title' => $title, 'company_name' => $companyName]) == null)
         {
             $internship->insertOne([
                 "_id"=> strval(time())+strval(random_int(1,1000000)),
@@ -85,6 +86,7 @@ class Internship{
                 "skills" => $skills,
                 "lvl" => $lvl,
                 "desc" => $desc,
+                "contactEmail" => $contactEmail,
                 "remuneration" => $remuneration,
                 "duration" => $duration,
                 "location" => $location,
