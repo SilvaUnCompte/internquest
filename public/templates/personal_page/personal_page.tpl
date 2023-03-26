@@ -50,16 +50,11 @@
                 </div>
             </div>
         </div>
-        
+
         {if $smarty.session.type == (0)}
             {include file="personal_page/student.tpl"}
         {else}
-            {if $smarty.session.type >= (1)}
-                {include file="personal_page/pilote.tpl"}
-                {if $smarty.session.type >= (2)}
-                    {include file="personal_page/admin.tpl"}
-                {/if}
-            {/if}
+            {include file="personal_page/pilote.tpl"}
         {/if}
     </div>
 </main>
