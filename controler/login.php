@@ -19,8 +19,8 @@ if (isset($_POST['input_email']) && isset($_POST['input_password'])) {
 			$smarty->assign("state", 2); // mdp faux
 			$smarty->display("login.tpl");
 			exit();
-		case 0:
-			if(session_status() !== PHP_SESSION_ACTIVE) session_start();
+		default:
+			if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 			
 			$currentUser = new User(Data::verifyEmailExist($email));
 			var_dump($currentUser->get_id());

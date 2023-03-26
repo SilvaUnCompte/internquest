@@ -112,6 +112,7 @@ class User{
             'password' => $this->password,
             'campus' => $this->campus,
             'promo' => $this->promo,
+            'logo' => $this->logo,
             'apply_count' => Count($this->wishlist),
             'wishlist' => $this->wishlist,
         ]);

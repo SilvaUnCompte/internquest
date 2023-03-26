@@ -43,7 +43,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<img src="/assets/images/default.png" alt="user" id="avatar">-->
                     </div>
                 </div>
             </div>
