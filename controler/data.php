@@ -40,18 +40,38 @@
 
         public static function researchStudent(){}
         public static function researchPilot(){}
-        public static function researchCompany(){}
+        public static function researchCompany($text){
+            global $company;
+            $resultsTab = $company->find([],['projection' => ['_id' => 1, 'name' => 1, 'visible' => 1, 'pilot_trust' => 1, 'grades' => 1, 'sectors' => 1]]);
+            $averageGrade = 0;
+            foreach($resultsTab as $doc){
+                $averageGrade = 0;
+                foreach($doc['grades'] as $grade){
+                    $averageGrade += $grade['grade'];
+                }
+                if(str_contains(strtolower($doc['name']),strtolower($text)) && $doc['visible']){
+                    echo '<div class="wrapper" value="'.$doc['_id'].'">';
+                        echo '<div class="header header_home unselectable">'.$doc['name'].'</div>';
+                        echo '<div class="content content_home">';
+                            echo '<p class="unselectable">Note du pilote : '.$doc['pilot_trust'].'</p>';
+                            echo '<p class="unselectable">'.$averageGrade/count($doc['grades']).'/5</p>';
+                        echo '</div>';
+                        echo '<img class="image" src="/assets/images/corner.png" alt=\'corner-image\'>';
+                    echo '</div>';
+                }
+            }
+        }
         public static function researchOffer($text){
             global $internship;
-            $resultsTab = $internship->find([],['projection' => ['_id' => 1, 'title' => 1, 'lvl' => 1, 'duration' => 1, 'company_name' => 1, 'contactEmail' => 1, 'apply_count' => 1, 'enable' => 1]]);
+            $resultsTab = $internship->find([],['projection' => ['_id' => 1, 'title' => 1, 'lvl' => 1, 'duration' => 1, 'company_name' => 1, 'location' => 1, 'contactEmail' => 1, 'apply_count' => 1, 'enable' => 1]]);
             foreach($resultsTab as $doc){
-                if(str_contains($doc['title'],$text) && $doc['enable']){
+                if(str_contains(strtolower($doc['title']),strtolower($text)) && $doc['enable']){
                     echo '<div class="wrapper" value="'.$doc['_id'].'">';
                         echo '<div class="header header_home unselectable">'.$doc['title'].'</div>';
                         echo '<div class="content content_home">';
                             echo '<p class="unselectable">'.$doc['lvl'].'</p>';
-                            echo '<p class="unselectable">'.$doc['duration'].'</p>';
-                            echo '<p class="unselectable">'.$doc['company_name'].'</p>';
+                            echo '<p class="unselectable">'.$doc['duration'].' mois</p>';
+                            echo '<p class="unselectable">'.$doc['location']['city'].', '.$doc['location']['postal_code'].'</p>';
                             echo '<p class="unselectable"><a href="mailto:'.$doc['contactEmail'].'">'.$doc['contactEmail'].'</a></p><br>';
                             echo '<p class="unselectable">♡ '.$doc['apply_count'].'</p>';
                         echo '</div>';
@@ -72,19 +92,19 @@
                         $studyLevels[$element['lvl']] += 1;
                     }
                 }
+                echo '<div class="filter">';
+                echo '<div class="filter-title first">';
+                echo '<h1>Niveau(x) d\'étude</h1>';
+                echo '</div>';
                 foreach($studyLevels as $element => $n){
-                    echo '<div class="filter">';
-                    echo '<div class="filter-title first">';
-                    echo '<h1>Niveau(x) d\'étude</h1>';
-                    echo '</div>';
                     echo '<div class="filters">';
                     echo '<div>';
                     echo '<input type="checkbox" name="schoolLevel" value='.$element.'>';
                     echo "<label>$element ($n)</label>";
                     echo '</div>';
                     echo '</div>';
-                    echo '</div>';
                 }
+                echo '</div>';
             }elseif($type == 2){
                 $resultsTab = $internship->find([],['projection' => ['_id' => 0, 'company_name' => 1]]);
                 $companyNames = array();
@@ -95,20 +115,19 @@
                         $companyNames[$element['company_name']] += 1;
                     }
                 }
-
+                echo '<div class="filter">';
+                echo '<div class="filter-title first">';
+                echo '<h1>Entreprises</h1>';
+                echo '</div>';
                 foreach($companyNames as $element => $n){
-                    echo '<div class="filter">';
-                    echo '<div class="filter-title first">';
-                    echo '<h1>Entreprises</h1>';
-                    echo '</div>';
                     echo '<div class="filters">';
                     echo '<div>';
                     echo '<input type="checkbox" name="typeRecherche">';
                     echo "<label>$element ($n)</label>";
                     echo '</div>';
                     echo '</div>';
-                    echo '</div>';
                 }
+                echo '</div>';
             }
         }
         public static function durationFilter(){
@@ -144,19 +163,19 @@
                         }
                     }
                 }
+                echo '<div class="filter">';
+                echo '<div class="filter-title first">';
+                echo '<h1>Secteurs d\'activité</h1>';
+                echo '</div>';
                 foreach($sectorsTab as $element => $n){
-                    echo '<div class="filter">';
-                    echo '<div class="filter-title first">';
-                    echo '<h1>Niveau(x) d\'étude</h1>';
-                    echo '</div>';
                     echo '<div class="filters">';
                     echo '<div>';
-                    echo '<input type="checkbox" name="schoolLevel" value='.$element.'>';
+                    echo '<input type="checkbox" name="activitySectors" value='.$element.'>';
                     echo "<label>$element ($n)</label>";
                     echo '</div>';
                     echo '</div>';
-                    echo '</div>';
                 }
+                echo '</div>';
             }elseif($type == 2){
                 $resultsTab = $company->find([],['projection' => ['_id' => 0, 'grades' => 1]]);
                 $gradesTab = array();
@@ -171,19 +190,19 @@
                         }
                     }
                 }
+                echo '<div class="filter">';
+                echo '<div class="filter-title first">';
+                echo '<h1>Notes</h1>';
+                echo '</div>';
                 foreach($gradesTab as $element => $n){
-                    echo '<div class="filter">';
-                    echo '<div class="filter-title first">';
-                    echo '<h1>Niveau(x) d\'étude</h1>';
-                    echo '</div>';
                     echo '<div class="filters">';
                     echo '<div>';
-                    echo '<input type="radio" name="schoolLevel" value='.$element.'>';
+                    echo '<input type="radio" name="grades" value='.$element.'>';
                     echo "<label>$element ($n)</label>";
                     echo '</div>';
                     echo '</div>';
-                    echo '</div>';
                 }
+                echo '</div>';
             }
         }
     }

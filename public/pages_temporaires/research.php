@@ -13,7 +13,7 @@
     <?php include('/wamp64/www/projects/internquest/controler/data.php');?>
     <main>
         <div id="first_row" class="row">
-            <form id="filters_column" method="post">
+            <form id="filters_column" method="get">
                 <div class="filter">
                     <div class="filter-title first">
                         <h1>Type de recherche</h1>
@@ -70,16 +70,7 @@
                             ?>
                         </div>
                         <div id="card_info_showing">
-                            <div id="title">
-                                <h1 id="title">Intitulé du stage</h1>
-                            </div>
-                            <div id="data">
-                                <ul>
-                                    <div id="presentation">
-
-                                    </div>
-                                </ul>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -87,5 +78,6 @@
         </div>
     </main>
     <script src="/public/js/research.js"></script>
+    <script src="/public/js/add_field/show_offer_data.js"></script>
 </body>
 </html>

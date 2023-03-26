@@ -1,3 +1,5 @@
+import ('/public/js/add_field/show_offer_data.js');
+
 document.getElementById("close-filters-button").addEventListener("click", ()=>{
     document.getElementById("filters_column").style.display = "none";
     document.getElementById("show_filters_button").style.display = "block";
@@ -13,8 +15,10 @@ document.getElementById("show_filters_button").addEventListener("click", ()=>{
 const elements = document.querySelectorAll(".wrapper");
     elements.forEach(elements => {
         elements.addEventListener("click", (event)=>{
-            let $id = elements.getAttribute('value');
+            const urlParams = new URLSearchParams();
+            urlParams.append('offerID', elements.getAttribute('value'));
             document.getElementById("card_info_showing").style.display = "flex";
+            showOfferData();
     });
 })
 
