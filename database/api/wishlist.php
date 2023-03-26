@@ -16,28 +16,26 @@ if (!isset($_SESSION['id'])) {
 $currentUser = new User($_SESSION['id']);
 $curentPage = $_GET['page'] ?? 0;
 
-for ($i = 0; $i < 5; $i++) {
-    echo $currentUser->get_wishlist()[5*$curentPage + $i]['id_internship'];
-    $curentIntern = new Internship($currentUser->get_wishlist()[5*$curentPage + $i]['id_internship']);
+for ($i = 0; $i < count($currentUser->get_wishlist()); $i++) {
+    $curentIntern[$i] = new Internship($currentUser->get_wishlist()[$i]['id_internship']);
     
     $wishlist[] = [
-        'id' => $curentIntern->get_id(),
-        'title' => $curentIntern->get_title(),
-        'lvl' => $curentIntern->get_lvl(),
-        'desc' => $curentIntern->get_desc(),
-        'contactEmail' => $curentIntern->get_contactEmail(),
-        'remuneration' => $curentIntern->get_remuneration(),
-        'duration' => $curentIntern->get_duration(),
-        'location' => $curentIntern->get_location(),
-        'companyName' => $curentIntern->get_companyName(),
-        'applyCount' => $curentIntern->get_applyCount(),
-        'enable' => $curentIntern->get_enable()
+        'id' => $curentIntern[$i]->get_id(),
+        'title' => $curentIntern[$i]->get_title(),
+        // 'lvl' => $curentIntern[$i]->get_lvl(),
+        // 'desc' => $curentIntern[$i]->get_desc(),
+        'contactEmail' => $curentIntern[$i]->get_contactEmail(),
+        // 'remuneration' => $curentIntern[$i]->get_remuneration(),
+        // 'duration' => $curentIntern[$i]->get_duration(),
+        // 'location' => $curentIntern[$i]->get_location(),
+        'companyName' => $curentIntern[$i]->get_companyName(),
+        'applyDate' => $currentUser->get_wishlist()[$i]['apply_date'],
+        // 'applyCount' => $curentIntern[$i]->get_applyCount(),
+        // 'enable' => $curentIntern[$i]->get_enable()
     ];
 }
 
-echo json_encode($wishlist);
-
-$result[0] = ['wishCount' => count($currentUser->get_wishlist())];
-$result[1] = ['wishlist' => array_slice($wishlist, $curentPage * 5, 5)];
+$result['wishCount'] = count($currentUser->get_wishlist());
+$result['wishlist'] = array_slice($wishlist, $curentPage * 5, 5);
 
 echo json_encode($result);

@@ -6,11 +6,9 @@ function refreashWishData() {
     xhr.open("GET", "/database/api/wishlist.php?page=" + (wp - 1), true);
     xhr.onload = () => {
         if (xhr.status == 200) {
-            rawJSON = JSON.parse(xhr.responseText);
-            console.log(rawJSON);
-            
-            wp_total = Math.ceil(rawJSON[0].wishCount / 5);
-            data = rawJSON[1].wishlist;
+            rawJSON = JSON.parse(xhr.responseText);            
+            wp_total = Math.ceil(rawJSON.wishCount / 5);
+            data = rawJSON.wishlist;
 
             for (var i = 0; i < 5; i++) {
                 if (data[i] == undefined) {
@@ -25,10 +23,10 @@ function refreashWishData() {
                 else {
                     document.getElementById('offer-' + i).style.background = "white";
                     card = document.getElementById('offer-' + i);
-                    card.children[0].children[0].innerHTML = data[i].id_internship;
-                    card.children[1].innerHTML = data[i].id_internship;
-                    card.children[2].innerHTML = data[i].id_internship;
-                    card.children[3].innerHTML = data[i].apply_date;
+                    card.children[0].children[0].innerHTML = data[i].title;
+                    card.children[1].innerHTML = data[i].companyName;
+                    card.children[2].innerHTML = data[i].contactEmail;
+                    card.children[3].innerHTML = data[i].applyDate;
                 }
             }
 

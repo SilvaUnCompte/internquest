@@ -29,6 +29,7 @@ class Internship{
         $this->remuneration = $this->internshipArray['remuneration'];
         $this->duration = $this->internshipArray['duration'];
         $this->location = $this->internshipArray['location'];
+        $this->companyName = $this->internshipArray['company_name'];
         $this->applyCount = $this->internshipArray['apply_count'];
         $this->enable = $this->internshipArray['enable'];
     }
@@ -51,7 +52,7 @@ class Internship{
     }
     public function set_lvl($string){$this->lvl = $string;}
     public function set_desc($longString){$this->desc = $longString;}
-    public function set_contactEmail($string){$this->companyName = $string;}
+    public function set_contactEmail($string){$this->contactEmail = $string;}
     public function set_remuneration($float){$this->remuneration = $float;}
     public function set_duration($int){$this->duration = $int;}
     public function set_location($streetAddress, $city, $postalCode){
