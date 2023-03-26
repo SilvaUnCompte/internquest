@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 require($_SERVER['DOCUMENT_ROOT'] . '/database/tables/internship.php');
 
-$currentInternship = new Internship($_GET['offerID']);
+$currentInternship = new Internship($_GET['id']);
 
 $result = array();
 $result['title'] = $currentInternship->get_title();

@@ -19,7 +19,7 @@ class Internship{
 
     public function  __construct($id){
         global $internship;
-        $this->internshipArray = $internship->findOne(['_id' => $id]);
+        $this->internshipArray = $internship->findOne(['_id' => intval($id)]);
         $this->id = $this->internshipArray['_id'];
         $this->title = $this->internshipArray['title'];
         $this->skills = $this->internshipArray['skills'];

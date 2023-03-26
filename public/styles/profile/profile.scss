@@ -31,7 +31,8 @@
     }
 }
 
-.offer-example, .account-example {
+.offer-example,
+.account-example {
     border: 0;
     border-radius: 10px;
     padding: 10px;
@@ -40,6 +41,7 @@
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 10px;
+    align-items: flex-end
 }
 
 
@@ -80,13 +82,13 @@ button {
     top: 0;
 }
 
-#logout-btn{
+#logout-btn {
     position: absolute;
     right: 0;
     top: 0;
 }
 
-.buttons{
+.buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -96,7 +98,7 @@ button {
     }
 }
 
-.research-account-div{
+.research-account-div {
     margin-bottom: 10px;
 }
 
@@ -128,3 +130,15 @@ button {
 //         }
 //     }
 // }
+
+.btn-action{
+    background-color: #ffffff;
+    color: #8f8f8f;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+    top: 0;
+    width: 70px;
+    padding: 7px;
+}

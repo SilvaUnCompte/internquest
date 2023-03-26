@@ -18,7 +18,7 @@ class User{
 
     public function __construct($id){
         global $account;
-        $this->accountArray = $account->findOne(['_id' => $id]);
+        $this->accountArray = $account->findOne(['_id' => intval($id)]);
         $this->id = $this->accountArray['_id'];
         $this->firstname = $this->accountArray['name']['first'];
         $this->lastname = $this->accountArray['name']['last'];
@@ -89,7 +89,7 @@ class User{
                 "campus"=> $campus,
                 "promo"=> $promo,
                 "apply_count"=> 0,
-                "type"=> $type,
+                "type"=> intval($type),
                 "wishlist"=> []
             ]);
             return 0;

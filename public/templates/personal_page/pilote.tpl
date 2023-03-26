@@ -2,7 +2,7 @@
     <div class="form-col">
         <div class="research-account-div">
             <label>Etudiants de ma promotion : </label>
-            <input type="text" placeholder="Rechercher un étudiant...">
+            <input id="search-student" type="text" placeholder="Rechercher un étudiant...">
         </div>
         <div class="account-list">
             {for $i=0 to 4}
@@ -10,8 +10,8 @@
                     <p class="account-title"><b>Lastname</b></p>
                     <p class="account-title"><b>Firstname</b></p>
                     <div>
-                        <a class="account-company" href='#'>Editer</a>
-                        <a class="account-company" href='#'>Supprimer</a>
+                        <button class="btn-action" href='#'>Editer</button>
+                        <button class="btn-action">Supprimer</button>
                     </div>
                 </div>
             {/for}
@@ -32,3 +32,5 @@
                 stage</button></a>
     </div>
 </div>
+
+<script src="/public/js/add_field/show_account.js"></script>

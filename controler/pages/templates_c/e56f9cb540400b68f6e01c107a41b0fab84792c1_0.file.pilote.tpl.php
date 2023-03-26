@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-26 21:37:52
+/* Smarty version 4.2.1, created on 2023-03-27 00:15:22
   from 'C:\xampp\htdocs\www\internquest\public\templates\personal_page\pilote.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_64209f1034d295_34563212',
+  'unifunc' => 'content_6420c3fa7dd125_67754104',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e56f9cb540400b68f6e01c107a41b0fab84792c1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\personal_page\\pilote.tpl',
-      1 => 1679859470,
+      1 => 1679868921,
       2 => 'file',
     ),
   ),
@@ -21,12 +21,12 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:personal_page/admin.tpl' => 1,
   ),
 ),false)) {
-function content_64209f1034d295_34563212 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6420c3fa7dd125_67754104 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="form-row">
     <div class="form-col">
         <div class="research-account-div">
             <label>Etudiants de ma promotion : </label>
-            <input type="text" placeholder="Rechercher un étudiant...">
+            <input id="search-student" type="text" placeholder="Rechercher un étudiant...">
         </div>
         <div class="account-list">
             <?php
@@ -39,8 +39,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 
                     <p class="account-title"><b>Lastname</b></p>
                     <p class="account-title"><b>Firstname</b></p>
                     <div>
-                        <a class="account-company" href='#'>Editer</a>
-                        <a class="account-company" href='#'>Supprimer</a>
+                        <button class="btn-action" href='#'>Editer</button>
+                        <button class="btn-action">Supprimer</button>
                     </div>
                 </div>
             <?php }
@@ -63,5 +63,9 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 
         <a class="add" href="/controler/pages/create_internship.php"> <button class="add">Ajouter une offre de
                 stage</button></a>
     </div>
-</div><?php }
+</div>
+
+<?php echo '<script'; ?>
+ src="/public/js/add_field/show_account.js"><?php echo '</script'; ?>
+><?php }
 }

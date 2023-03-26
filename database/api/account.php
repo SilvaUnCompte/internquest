@@ -10,30 +10,17 @@ if (!isset($_SESSION['id'])) {
     exit;
 }
 
-$currentUser = new User($_SESSION['id']);
-$curentPage = $_GET['page'] ?? 0;
+$research = $_GET['search'] ?? '';
+$type = $_GET['type'] ?? 0;
 
+$resultsTab = $account->find(['type' => intval($type)], ['projection' => ['_id' => 1, 'name' => 1]]);
+$result = array();
+foreach ($resultsTab as $pilot) {
+    if (str_contains(strtolower($pilot['name']['first']) . ' ' . strtolower($pilot['name']['last']), strtolower($research))) {
+        array_push($result, $pilot);
+    }
+}
 
-// for ($i = 0; $i < count($currentUser->get_wishlist()); $i++) {
-//     $curentIntern[$i] = new Internship($currentUser->get_wishlist()[$i]['id_internship']);
-    
-//     $wishlist[] = [
-//         'id' => $curentIntern[$i]->get_id(),
-//         'title' => $curentIntern[$i]->get_title(),
-//         // 'lvl' => $curentIntern[$i]->get_lvl(),
-//         // 'desc' => $curentIntern[$i]->get_desc(),
-//         'contactEmail' => $curentIntern[$i]->get_contactEmail(),
-//         // 'remuneration' => $curentIntern[$i]->get_remuneration(),
-//         // 'duration' => $curentIntern[$i]->get_duration(),
-//         // 'location' => $curentIntern[$i]->get_location(),
-//         'companyName' => $curentIntern[$i]->get_companyName(),
-//         'applyDate' => $currentUser->get_wishlist()[$i]['apply_date'],
-//         // 'applyCount' => $curentIntern[$i]->get_applyCount(),
-//         // 'enable' => $curentIntern[$i]->get_enable()
-//     ];
-// }
+$result = array_slice($result, 0, 5);
 
-// $result['wishCount'] = count($currentUser->get_wishlist());
-// $result['wishlist'] = array_slice($wishlist, $curentPage * 5, 5);
-
-// echo json_encode($result);
+echo json_encode($result);

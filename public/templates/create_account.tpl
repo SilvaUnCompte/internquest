@@ -40,4 +40,3 @@
 </main>
 
 {include file="helpers/footer.tpl"}
-<script src="../public/js/create.js"></script>
