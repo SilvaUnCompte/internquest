@@ -42,7 +42,7 @@
         public static function researchPilot(){}
         public static function researchCompany($text){
             global $company;
-            $resultsTab = $company->find([],['projection' => ['_id' => 1, 'name' => 1, 'visible' => 1, 'pilot_trust' => 1, 'grades' => 1, 'sectors' => 1]]);
+            $resultsTab = $company->find([],['projection' => ['_id' => 1, 'name' => 1, 'visible' => 1, 'pilot_trust' => 1, 'grades' => 1]]);
             $averageGrade = 0;
             foreach($resultsTab as $doc){
                 $averageGrade = 0;
