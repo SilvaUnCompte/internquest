@@ -8,8 +8,9 @@ function remove(id){
         xhr.open("GET", "/database/api/delete_account.php?id=" + id, true);
         xhr.onload = () => {
             if (xhr.status == 200) {
-                refreashAccountData(0);
                 refreashAccountData(1);
+                refreashAccountData(0);
+                console.log("ok");
             }
             else {
                 html = "<p>Erreur " + xhr.status + " : " + xhr.statusText + "</p>";
