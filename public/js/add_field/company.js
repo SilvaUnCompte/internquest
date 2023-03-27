@@ -1,6 +1,10 @@
 let locations = [];
 let sectors = [];
 
+function confirm(){
+    alert(document.getElementById("input-name").value + " a bien été créé.");
+}
+
 function add_location() {
     const input_street = document.getElementById("input_street");
     const input_city = document.getElementById("input_city");

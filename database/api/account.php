@@ -13,7 +13,7 @@ if (!isset($_SESSION['id'])) {
 $research = $_GET['search'] ?? '';
 $type = $_GET['type'] ?? 0;
 
-$resultsTab = $account->find(['type' => intval($type)], ['projection' => ['_id' => 1, 'name' => 1]]);
+$resultsTab = $account->find(['type' => intval($type)], ['projection' => ['_id' => 1, 'apply_count' => 1, 'name' => 1,'type' => 1]]);
 $result = array();
 foreach ($resultsTab as $pilot) {
     if (str_contains(strtolower($pilot['name']['first']) . ' ' . strtolower($pilot['name']['last']), strtolower($research))) {

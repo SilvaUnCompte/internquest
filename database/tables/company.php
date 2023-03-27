@@ -141,7 +141,7 @@ class Company{
             "logo" => $logo,
             "desc" => $desc,
             "visible" => $visible,
-            "pilot_trust" => $pilot_trust,
+            "pilot_trust" => intval($pilot_trust),
             "internships" => $internships,
             "locations" => $locations,
             "grades" => $grades,

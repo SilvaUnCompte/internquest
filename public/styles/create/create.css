@@ -41,6 +41,7 @@ input {
   margin: 10px 3px 10px;
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
 }
 
 .form-col {
@@ -141,4 +142,11 @@ input[type=submit]:hover {
 
 .hide {
   display: none;
+}
+
+input[type=checkbox] {
+  width: 20px;
+  height: 20px;
+  margin: 0 10px;
+  cursor: pointer;
 }/*# sourceMappingURL=create.css.map */
