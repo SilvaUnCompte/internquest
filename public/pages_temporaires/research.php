@@ -70,7 +70,19 @@
                             ?>
                         </div>
                         <div id="card_info_showing">
+                            <div id="card_infos">
                             
+                            </div>
+                            <?php
+                            // session_start();
+                            // $_SESSION['type'] = 0;
+                                //if($_SESSION['type'] == 0){
+                                    echo '<button id="postuler-button" class="btn_model_animated"> Postuler </button>';
+                                //}elseif($_SESSION['type'] == 1){
+                                    echo '<div id="buttons-div"><button id="modify-button" class="btn_model_animated"> Modifier </button>';
+                                    echo '<button id="delete-button" class="btn_model_animated"> Supprimer </button></div>';
+                                //}
+                            ?>
                         </div>
                     </div>
                 </div>
@@ -79,5 +91,6 @@
     </main>
     <script src="/public/js/research.js"></script>
     <script src="/public/js/add_field/show_offer_data.js"></script>
+    <script src="/public/js/add_field/show_company_data.js"></script>
 </body>
 </html>

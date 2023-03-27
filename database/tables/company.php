@@ -19,14 +19,14 @@ class Company{
 
     public function __construct($id){
         global $company;
-        $this->companyArray = $company->findOne(['_id' => $id]);
+        $this->companyArray = $company->findOne(['_id' => intval($id)]);
         $this->id = $this->companyArray['_id'];
         $this->name = $this->companyArray['name'];
         $this->logo = $this->companyArray['logo'];
         $this->desc = $this->companyArray['desc'];
         $this->visible = $this->companyArray['visible'];
         $this->sectors = $this->companyArray['sectors'];
-        $this->pilotTrust = $this->companyArray['pilotTrust'];
+        $this->pilotTrust = $this->companyArray['pilot_trust'];
         $this->internships = $this->companyArray['internships'];
         $this->locations = $this->companyArray['locations'];
         $this->grades = $this->companyArray['grades'];
