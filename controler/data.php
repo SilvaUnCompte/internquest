@@ -85,7 +85,7 @@
                         echo '<div class="content content_home">';
                             echo '<p class="unselectable">'.$doc['lvl'].'</p>';
                             echo '<p class="unselectable">'.$doc['duration'].' mois</p>';
-                            echo '<p class="unselectable">'.$doc['location']['city'].', '.$doc['location']['postal_code'].'</p>';
+                            echo '<p class="unselectable">'.$doc['location']['city'].', </p>';
                             echo '<p class="unselectable"><a href="mailto:'.$doc['contactEmail'].'">'.$doc['contactEmail'].'</a></p><br>';
                             echo '<p class="unselectable">♡ '.$doc['apply_count'].'</p>';
                         echo '</div>';
