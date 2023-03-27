@@ -1,16 +1,14 @@
 const search_student = document.querySelector("#search-student");
 const search_pilote = document.querySelector("#search-pilote");
 
-function remove(id){
-    if(confirm("Voulez-vous vraiment supprimer ce compte ?")){
+function remove(id, type) {
+    if (confirm("Voulez-vous vraiment supprimer ce compte ?")) {
         console.log(id);
         var xhr = new XMLHttpRequest();
         xhr.open("GET", "/database/api/delete_account.php?id=" + id, true);
         xhr.onload = () => {
             if (xhr.status == 200) {
-                refreashAccountData(1);
-                refreashAccountData(0);
-                console.log("ok");
+                refreashAccountData(parseInt(type));
             }
             else {
                 html = "<p>Erreur " + xhr.status + " : " + xhr.statusText + "</p>";
@@ -23,9 +21,9 @@ function remove(id){
 
 
 function refreashAccountData(type) {
-    typeString = type?"pilote-":"student-"
+    typeString = type ? "pilote-" : "student-"
     var xhr = new XMLHttpRequest();
-    xhr.open("GET", "/database/api/account.php?search=" + (type?search_pilote.value:search_student.value) + "&type=" + type, true);
+    xhr.open("GET", "/database/api/account.php?search=" + (type ? search_pilote.value : search_student.value) + "&type=" + type, true);
     xhr.onload = () => {
         if (xhr.status == 200) {
             data = JSON.parse(xhr.responseText);
@@ -35,19 +33,22 @@ function refreashAccountData(type) {
                     // cacher les enfants
                     card = document.getElementById(typeString + i);
                     card.children[0].innerHTML = ".";
+                    card.children[2-type].innerHTML = "";
                     card.children[1].innerHTML = "";
-                    card.children[2].children[0].innerHTML = "";
-                    card.children[2].children[1].innerHTML = "";
-                    card.children[2].children[1].setAttribute( "onClick", "javascript: ;" );
+                    card.children[3-type].children[0].innerHTML = "";
+                    card.children[3-type].children[1].innerHTML = "";
+                    card.children[3-type].children[1].setAttribute("onClick", "javascript: ;");
                 }
                 else {
                     document.getElementById(typeString + i).style.background = "white";
                     card = document.getElementById(typeString + i);
                     card.children[0].innerHTML = data[i].name.first;
+                    card.children[2-type].innerHTML = data[i].apply_count;
                     card.children[1].innerHTML = data[i].name.last;
-                    card.children[2].children[0].innerHTML = "Editer";
-                    card.children[2].children[1].innerHTML = "Supprimer";
-                    card.children[2].children[1].setAttribute( "onClick", "javascript: remove(\"" + data[0]._id + "\");" );
+                    card.children[3-type].children[0].innerHTML = "Editer";
+                    card.children[3-type].children[1].innerHTML = "Supprimer";
+                    card.children[3-type].children[1].setAttribute("onClick", "javascript: remove(\"" + data[0]._id + "\",\"" + data[0].type + "\");");
+
                 }
             }
         }
@@ -58,6 +59,9 @@ function refreashAccountData(type) {
     xhr.send();
 };
 
-refreashAccountData(0)
+
+
+refreashAccountData(0);
+
 search_student.addEventListener('input', () => refreashAccountData(0));
 search_pilote.addEventListener('input', () => refreashAccountData(1));

@@ -77,7 +77,7 @@ class Internship{
             "enable" => $this->enable
         ]);
     }
-    public static function createInternship($title, $skills, $lvl, $desc, $contactEmail, $remuneration, $duration, $location, $companyName, $enable){
+    public static function createInternship($title, $skills, $lvl, $desc, $contactEmail, $remuneration, $duration, $location, $companyName, $enable, $nb_apply=0){
         global $internship;
         if ($internship->findOne(['title' => $title, 'company_name' => $companyName]) == null)
         {
@@ -88,11 +88,11 @@ class Internship{
                 "lvl" => $lvl,
                 "desc" => $desc,
                 "contactEmail" => $contactEmail,
-                "remuneration" => $remuneration,
-                "duration" => $duration,
+                "remuneration" => intval($remuneration),
+                "duration" => intval($duration),
                 "location" => $location,
                 "company_name" => $companyName,
-                "apply_count" => 0,
+                "apply_count" => intval($nb_apply),
                 "enable" => $enable
             ]);
             return 0;

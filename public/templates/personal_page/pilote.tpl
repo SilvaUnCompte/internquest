@@ -9,6 +9,7 @@
                 <div class="account-example" id="student-{$i}">
                     <p class="account-title"><b>Lastname</b></p>
                     <p class="account-title"><b>Firstname</b></p>
+                    <p class="account-title"><b>Apply</b></p>
                     <div>
                         <button class="btn-action" href='#'>Editer</button>
                         <button class="btn-action">Supprimer</button>
