@@ -21,9 +21,8 @@ $mail = $_POST['input_mail'];
 $remun = $_POST['input_remun'];
 $duration = $_POST['input_duration'];
 $nb_ap = $_POST['input_nb_ap'];
-$visible = isset($_POST['input_visible']) ? true : false;
 
 //Création de l'utilisateur
-Internship::createInternship($title, [0=>$skills], $lvl, $desc, $mail, $remun, $duration, ['street_address'=>$street, 'city'=>$city, 'postal_code'=>$postal], $companyName, $visible, $nb_ap);
+Internship::createInternship($title, [0=>$skills], $lvl, $desc, $mail, $remun, $duration, ['street_address'=>$street, 'city'=>$city, 'postal_code'=>$postal], $companyName, $nb_ap);
 
 header("Location: /controler/pages/personal_page.php");

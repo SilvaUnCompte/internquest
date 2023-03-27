@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-27 14:21:39
+/* Smarty version 4.2.1, created on 2023-03-27 15:50:35
   from 'C:\xampp\htdocs\www\internquest\public\templates\create_internship.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_64218a536ecf91_56226589',
+  'unifunc' => 'content_64219f2b7499f2_17285004',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'a5c5c23b3167e7445110bf5cc5d4db2e8b0acd8f' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\create_internship.tpl',
-      1 => 1679919681,
+      1 => 1679922970,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_64218a536ecf91_56226589 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64219f2b7499f2_17285004 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -91,10 +91,6 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
                     <div class="form-group">
                         <input type="number" min="0" class="form-control" id="input-nb_ap" name="input_nb_ap"
                             placeholder="42" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="input-visible">Visible :</label>
-                        <input type="checkbox" id="input-visible" name="input_visible">
                     </div>
                 </div>
             </div>

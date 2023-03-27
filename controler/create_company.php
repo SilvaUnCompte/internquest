@@ -16,7 +16,9 @@ $city = $_POST['input_city'];
 $postal = $_POST['input_postal'];
 $sector = $_POST['input_sector'];
 
+$visible = isset($_POST['input_visible']) ? true : false;
+
 //Création de l'utilisateur
-Company::createCompany($name, $desc, true, $pilot_trust, [], [['street_address'=>$street, 'city'=>$city, 'postal_code'=>$postal]], [], [$sector]);
+Company::createCompany($name, $desc, true, $pilot_trust, [], [['street_address'=>$street, 'city'=>$city, 'postal_code'=>$postal]], [], [$sector], $visible);
 
 header("Location: /controler/pages/personal_page.php");

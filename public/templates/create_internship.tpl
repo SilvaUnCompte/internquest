@@ -66,10 +66,6 @@
                         <input type="number" min="0" class="form-control" id="input-nb_ap" name="input_nb_ap"
                             placeholder="42" required>
                     </div>
-                    <div class="form-group">
-                        <label for="input-visible">Visible :</label>
-                        <input type="checkbox" id="input-visible" name="input_visible">
-                    </div>
                 </div>
             </div>
             <nav id="form-button"><input type="submit" value="Valider" onclick="confirm()"><input type="reset"

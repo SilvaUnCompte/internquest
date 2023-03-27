@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-27 11:17:08
+/* Smarty version 4.2.1, created on 2023-03-27 15:26:33
   from 'C:\xampp\htdocs\www\internquest\public\templates\personal_page\pilote.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_64215f147e6b78_18400434',
+  'unifunc' => 'content_64219989ea2f46_17268010',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e56f9cb540400b68f6e01c107a41b0fab84792c1' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\personal_page\\pilote.tpl',
-      1 => 1679908391,
+      1 => 1679923438,
       2 => 'file',
     ),
   ),
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:personal_page/admin.tpl' => 1,
   ),
 ),false)) {
-function content_64215f147e6b78_18400434 (Smarty_Internal_Template $_smarty_tpl) {
+function content_64219989ea2f46_17268010 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="form-row">
     <div class="form-col">
         <div class="research-account-div">
@@ -40,7 +40,7 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 
                     <p class="account-title"><b>Firstname</b></p>
                     <p class="account-title"><b>Apply</b></p>
                     <div>
-                        <button class="btn-action" href='#'>Editer</button>
+                        <button class="btn-action">Editer</button>
                         <button class="btn-action">Supprimer</button>
                     </div>
                 </div>
