@@ -74,8 +74,7 @@
                             
                             </div>
                             <?php
-                            // session_start();
-                            // $_SESSION['type'] = 0;
+                                // ne pas afficher bouton postuler si type de recherche est company
                                 //if($_SESSION['type'] == 0){
                                     echo '<button id="postuler-button" class="btn_model_animated"> Postuler </button>';
                                 //}elseif($_SESSION['type'] == 1){
