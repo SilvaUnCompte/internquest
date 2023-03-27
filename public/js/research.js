@@ -1,4 +1,5 @@
 import ('/public/js/add_field/show_offer_data.js');
+import ('/public/js/add_field/show_company_data.js');
 
 document.getElementById("close-filters-button").addEventListener("click", ()=>{
     document.getElementById("filters_column").style.display = "none";
@@ -13,18 +14,26 @@ document.getElementById("show_filters_button").addEventListener("click", ()=>{
 });
 
 const elements = document.querySelectorAll(".wrapper");
+    const urlParams = new URLSearchParams(window.location.search);
+    const researchType = urlParams.get('typeRecherche');
     elements.forEach(elements => {
         elements.addEventListener("click", (event)=>{
-            const urlParams = new URLSearchParams();
-            urlParams.append('offerID', elements.getAttribute('value'));
             document.getElementById("card_info_showing").style.display = "flex";
-            showOfferData();
+            if(researchType == 'offer'){
+                showOfferData(elements.getAttribute('value'));
+            }else if(researchType == 'company'){
+                showCompanyData(elements.getAttribute('value'));
+            }
     });
 })
 
 document.getElementById("search_bar").addEventListener('load', ()=>{
-    const urlParams = new URLSearchParams();
+    const urlParams = new URLSearchParams(window.location.search);
     const researchType = urlParams.get('typeRecherche');
     document.getElementById("search_bar").action = `?typeRecherche=${researchType}`;
+})
 
+document.getElementById("delete-button").addEventListener('click', ()=>{
+    const urlParams = new URLSearchParams(window.location.search);
+    deleteOffer(parseInt(document.getElementById("identifiant").innerHTML), urlParams.get('typeRecherche'));
 })

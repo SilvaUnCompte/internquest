@@ -36,7 +36,6 @@
         public static function researchCompany($text){
             global $company;
             $resultsTab = $company->find([],['projection' => ['_id' => 1, 'name' => 1, 'visible' => 1, 'pilot_trust' => 1, 'grades' => 1]]);
-            $averageGrade = 0;
             foreach($resultsTab as $doc){
                 $averageGrade = 0;
                 foreach($doc['grades'] as $grade){
@@ -47,7 +46,7 @@
                         echo '<div class="header header_home unselectable">'.$doc['name'].'</div>';
                         echo '<div class="content content_home">';
                             echo '<p class="unselectable">Note du pilote : '.$doc['pilot_trust'].'</p>';
-                            echo '<p class="unselectable">'.$averageGrade/count($doc['grades']).'/5</p>';
+                            echo '<p class="unselectable">'.(count($doc['grades']) != 0 ? $averageGrade/count($doc['grades']) : $averageGrade).'/5</p>';
                         echo '</div>';
                         echo '<img class="image" src="/assets/images/corner.png" alt=\'corner-image\'>';
                     echo '</div>';
@@ -63,10 +62,10 @@
                         echo '<div class="header header_home unselectable">'.$doc['title'].'</div>';
                         echo '<div class="content content_home">';
                             echo '<p class="unselectable">'.$doc['lvl'].'</p>';
-                            echo '<p class="unselectable">'.$doc['duration'].' mois</p>';
-                            echo '<p class="unselectable">'.$doc['location']['city'].', </p>';
+                            echo '<p class="unselectable">'.$doc['duration'].' semaines </p>';
+                            echo '<p class="unselectable">'.$doc['location']['city'].'</p>';
                             echo '<p class="unselectable"><a href="mailto:'.$doc['contactEmail'].'">'.$doc['contactEmail'].'</a></p><br>';
-                            echo '<p class="unselectable">♡ '.$doc['apply_count'].'</p>';
+                            echo '<p class="unselectable">✉︎ '.$doc['apply_count'].'</p>';
                         echo '</div>';
                         echo '<img class="image" src="/assets/images/corner.png" alt=\'corner-image\'>';
                     echo '</div>';

@@ -102,8 +102,9 @@ class Internship{
     }
     public static function deleteInternship($id){
         global $internship;
-        $deletedResult = $internship->deleteOne(['_id' => $id]);
-        return $deletedResult->getDeletedCount();
+        $deleted = new Internship($id);
+        $deleted->set_enable(false);
+        $deleted->updateInternship();
     }
 }
 ?>
