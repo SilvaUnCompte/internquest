@@ -118,6 +118,7 @@ class User{
         global $account;
         $user = new User($id);
         $user->setType(-1);
+        $user->setEmail("#".$user->get_email());
         $user->updateUser();
     }
 }

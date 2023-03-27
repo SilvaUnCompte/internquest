@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/public/styles/cards/style.css">
 </head>
 <body>
-    <?php include('/wamp64/www/projects/internquest/controler/data.php');?>
+    <?php include('/wamp64/www/others/internquest_1/internquest/controler/data.php');?>
     <main>
         <div id="first_row" class="row">
             <form id="filters_column" method="get">
