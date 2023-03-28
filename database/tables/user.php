@@ -47,6 +47,7 @@ class User{
     public function setPassword($hash, $salt){$this->password = ['hash' => $hash, 'salt' => $salt];}
     public function setCampus($string){$this->campus = $string;}
     public function setPromo($string){$this->promo = $string;}
+    public function add_apply_count(){$this->apply_count++;}
     public function setType($int){$this->type = $int;}
     public function addWishList($id_internship){
         $wish = $this->isAWish($id_internship);

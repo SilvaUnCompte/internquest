@@ -35,5 +35,23 @@ document.getElementById("search_bar").addEventListener('load', ()=>{
 
 document.getElementById("delete-button").addEventListener('click', ()=>{
     const urlParams = new URLSearchParams(window.location.search);
-    deleteOffer(parseInt(document.getElementById("identifiant").innerHTML), urlParams.get('typeRecherche'));
+    if(urlParams.get('typeRecherche') == 'offer'){
+        deleteOffer(parseInt(document.getElementById("identifiant").innerHTML), urlParams.get('typeRecherche'));
+    }else if(urlParams.get('typeRecherche') == 'offer'){
+        deleteCompany(parseInt(document.getElementById("identifiant").innerHTML), urlParams.get('typeRecherche'));
+    }
 })
+
+document.getElementById("postuler-button").addEventListener('click', ()=>{
+    if(confirm('Êtes-vous sur de vouloir postuler ?')){
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "/database/api/postulation.php?id="+parseInt(document.getElementById("identifiant").innerHTML), true);
+        xhr.send();
+    }
+})
+
+function addGrade(){
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "/database/api/grading.php?id="+document.getElementById("identifiant").innerHTML+"&grade="+document.getElementById('grade-entry').value, true);
+    xhr.send();
+}

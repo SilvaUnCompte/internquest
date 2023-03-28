@@ -171,6 +171,10 @@ main #first_row #search_and_results_column #results_row #card_info_showing #post
 main #first_row #search_and_results_column #results_row #card_info_showing h2 {
   margin-bottom: 15px;
 }
+main #first_row #search_and_results_column #results_row #card_info_showing h3 input {
+  width: 5%;
+  margin-right: 5px;
+}
 main #first_row #search_and_results_column #results_row #card_info_showing #skills-list {
   margin-left: 50px;
 }
