@@ -102,4 +102,8 @@ button {
   top: 0;
   width: 70px;
   padding: 7px;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=profile.css.map */
