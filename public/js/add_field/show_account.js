@@ -50,20 +50,19 @@ function refreashAccountData(type) {
                     card.children[3 - type].children[1].innerHTML = "Supprimer";
                     card.children[3 - type].children[0].setAttribute("onClick", "javascript: edit(\"" + data[0]._id + "\",\"" + data[0].type + "\");");
                     card.children[3 - type].children[1].setAttribute("onClick", "javascript: remove(\"" + data[0]._id + "\",\"" + data[0].type + "\");");
-
                 }
             }
         }
         else {
             html = "<p>Erreur " + xhr.status + " : " + xhr.statusText + "</p>";
         }
-        if(type){refreashAccountData(0);}
+        if(!type){refreashAccountData(1);}
     };
     xhr.send();
 };
 
 
 
-refreashAccountData(1);
+refreashAccountData(0);
 search_student.addEventListener('input', () => refreashAccountData(0));
 search_pilote.addEventListener('input', () => refreashAccountData(1));

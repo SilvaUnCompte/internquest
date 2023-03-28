@@ -21,7 +21,7 @@
   <header id="native-header">
     <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
       <a href="/controler/pages/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
-          loading="lazy" width="300" height="77.2"></a>
+          loading="lazy" width="300" height="77"></a>
       <div id="button_div_header">
 
         {if session_status() !== PHP_SESSION_ACTIVE}

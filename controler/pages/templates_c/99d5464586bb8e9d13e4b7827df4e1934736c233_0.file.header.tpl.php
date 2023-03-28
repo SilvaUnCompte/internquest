@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-26 15:14:18
+/* Smarty version 4.2.1, created on 2023-03-27 16:42:08
   from 'C:\xampp\htdocs\www\internquest\public\templates\helpers\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6420452a6de6e5_00928743',
+  'unifunc' => 'content_6421ab40ac1141_02772918',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '99d5464586bb8e9d13e4b7827df4e1934736c233' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\helpers\\header.tpl',
-      1 => 1679836457,
+      1 => 1679928039,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6420452a6de6e5_00928743 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6421ab40ac1141_02772918 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -45,7 +45,7 @@ function content_6420452a6de6e5_00928743 (Smarty_Internal_Template $_smarty_tpl)
   <header id="native-header">
     <nav aria-label="first_header" class="navbar navbar-dark bg-dark">
       <a href="/controler/pages/index.php"><img id="company_name" src="/assets/images/logo.webp" alt="InternQuest logo"
-          loading="lazy" width="300" height="77.2"></a>
+          loading="lazy" width="300" height="77"></a>
       <div id="button_div_header">
 
         <?php if (session_status() !== PHP_SESSION_ACTIVE) {?>
