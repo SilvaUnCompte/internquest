@@ -17,7 +17,7 @@ function remove(id, type) {
     }
 }
 function edit(id, type) {
-    document.location.href="/controler/pages/edit_account.php?id=" + id
+    document.location.href = "/controler/pages/edit_account.php?id=" + id
 }
 
 function refreashAccountData(type) {
@@ -48,21 +48,24 @@ function refreashAccountData(type) {
                     card.children[1].innerHTML = data[i].name.last;
                     card.children[3 - type].children[0].innerHTML = "Editer";
                     card.children[3 - type].children[1].innerHTML = "Supprimer";
-                    card.children[3 - type].children[0].setAttribute("onClick", "javascript: edit(\"" + data[0]._id + "\",\"" + data[0].type + "\");");
-                    card.children[3 - type].children[1].setAttribute("onClick", "javascript: remove(\"" + data[0]._id + "\",\"" + data[0].type + "\");");
+                    card.children[3 - type].children[0].setAttribute("onClick", "javascript: edit(\"" + data[i]._id + "\",\"" + data[i].type + "\");");
+                    card.children[3 - type].children[1].setAttribute("onClick", "javascript: remove(\"" + data[i]._id + "\",\"" + data[i].type + "\");");
                 }
             }
         }
         else {
             html = "<p>Erreur " + xhr.status + " : " + xhr.statusText + "</p>";
         }
-        if(!type){refreashAccountData(1);}
+        if (first) {
+            setTimeout(() => { refreashAccountData(1); first = 0; }, 300);
+        }
     };
     xhr.send();
 };
 
 
-
+first = 1;
 refreashAccountData(0);
+
 search_student.addEventListener('input', () => refreashAccountData(0));
 search_pilote.addEventListener('input', () => refreashAccountData(1));

@@ -3,9 +3,13 @@ header('Content-Type: application/json');
 require($_SERVER['DOCUMENT_ROOT'] . '/database/tables/internship.php');
 require($_SERVER['DOCUMENT_ROOT'] . '/database/tables/user.php');
 
-session_start();
-$_SESSION['type'] = 0;
-$_SESSION['id'] = 0;
+// Securité
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
+
+if (!isset($_SESSION['id'])) {
+    echo json_encode(['error' => 'Not logged']);
+    exit;
+}
 
 $currentUser = new User($_SESSION['id']);
 $currentInternship = new Internship($_GET['id']);

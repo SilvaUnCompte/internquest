@@ -15,6 +15,10 @@ if (!isset($_SESSION["id"])) {
     $smarty->assign("title", "InternQuest - Edition d'un compte");
     $currentUser = new User(intval($_GET['id']));
 
+    if(!isset($currentUser)) {
+        header("HTTP/1.1 404");
+    }
+
     $smarty->assign("id_", $_GET['id']);
     $smarty->assign("firstname", $currentUser->get_firstname());
     $smarty->assign("lastname", $currentUser->get_lastname());

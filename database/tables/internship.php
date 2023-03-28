@@ -19,6 +19,10 @@ class Internship{
 
     public function  __construct($id){
         global $internship;
+        if ($internship->count(['_id' => intval($id)]) == 0) {
+            echo header("HTTP/1.1 404");
+            exit;
+        }
         $this->internshipArray = $internship->findOne(['_id' => intval($id)]);
         $this->id = $this->internshipArray['_id'];
         $this->title = $this->internshipArray['title'];
@@ -101,7 +105,6 @@ class Internship{
         }
     }
     public static function deleteInternship($id){
-        global $internship;
         $deleted = new Internship($id);
         $deleted->set_enable(false);
         $deleted->updateInternship();

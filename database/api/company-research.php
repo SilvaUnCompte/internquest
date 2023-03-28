@@ -12,7 +12,13 @@ $result['desc'] = $currentCompany->get_desc();
 $result['pilot_trust'] = $currentCompany->get_pilotTrust();
 $result['internships'] = $currentCompany->get_internships();
 $result['locations'] = $currentCompany->get_locations();
-$result['grades'] = json_encode($currentCompany->get_grades());
 $result['sectors'] = $currentCompany->get_sectors();
+
+$averageGrade = 0;
+foreach ($currentCompany->get_grades() as $grade) {
+    $averageGrade += $grade['grade'];
+}
+
+$result['avrage'] = count($currentCompany->get_grades()) != 0 ? round($averageGrade / count($currentCompany->get_grades()),1) : "Acune note";
 
 echo json_encode($result);

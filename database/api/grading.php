@@ -1,15 +1,15 @@
 <?php
 require($_SERVER['DOCUMENT_ROOT'] . '/database/tables/company.php');
 
-session_start();
-$_SESSION['type'] = 0;
-$_SESSION['id'] = 0;
+// Securité
+if (session_status() !== PHP_SESSION_ACTIVE) session_start();
 
-echo $_GET['id'];
-echo $_GET['grade'];
+if (!isset($_SESSION['id'])) {
+    echo json_encode(['error' => 'Not logged']);
+    exit;
+}
+
 
 $currentCompany = new Company($_GET['id']);
 $currentCompany->addGrades($_SESSION['id'], $_GET['grade']);
 $currentCompany->updateCompany();
-
-

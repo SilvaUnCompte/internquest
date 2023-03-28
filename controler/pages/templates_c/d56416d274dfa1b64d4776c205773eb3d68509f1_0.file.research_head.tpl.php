@@ -1,28 +1,27 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-28 11:34:07
-  from 'C:\xampp\htdocs\www\internquest\public\templates\research.tpl' */
+/* Smarty version 4.2.1, created on 2023-03-28 15:02:43
+  from 'C:\xampp\htdocs\www\internquest\public\templates\research_head.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_6422b48fa72182_45329205',
+  'unifunc' => 'content_6422e573ebbde6_35090524',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    'e940f3b40c91d4e22e5f6bbe4de69e6629340df6' => 
+    'd56416d274dfa1b64d4776c205773eb3d68509f1' => 
     array (
-      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\research.tpl',
-      1 => 1679996045,
+      0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\research_head.tpl',
+      1 => 1680008563,
       2 => 'file',
     ),
   ),
   'includes' => 
   array (
     'file:helpers/header.tpl' => 1,
-    'file:helpers/footer.tpl' => 1,
   ),
 ),false)) {
-function content_6422b48fa72182_45329205 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422e573ebbde6_35090524 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -38,7 +37,7 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
                     <h1>Type de recherche</h1>
                     <a id="close-filters-button">✖</a>
                 </div>
-                <div class="filters">
+                <div id="radio-type" class="filters">
                     <div>
                         <input type="radio" name="st" value="0" <?php if ($_GET['st'] == (0)) {?> checked <?php }?>>
                         <label>Offre de stage</label>
@@ -47,49 +46,24 @@ $_smarty_tpl->_subTemplateRender('file:helpers/header.tpl', $_smarty_tpl->cache_
                         <input type="radio" name="st" value="1" <?php if ($_GET['st'] == (1)) {?> checked <?php }?>>
                         <label>Entreprise</label>
                     </div>
+                    </a>
                 </div>
             </div>
                         <div class="button-research-type">
-                <button type="submit" class="btn_model_animated">Confirmer</button>
+                <button type="button" class="btn_model_animated" onclick="search()">Confirmer</button>
                 <button type="reset" class="btn_model_animated">Réinitialiser</button>
             </div>
         </form>
         <div id="search_and_results_column">
             <div>
                 <div id="search_row">
-                    <form id="search_bar" method="post">
+                    <form id="search_bar" action="/controler/pages/research.php" method="get">
                         <button id="show_filters_button" class="btn_model_animated" type="button">Filtres</button>
-                        <input type="search" placeholder="Search" name="sc">
-                        <button type="submit" class="btn_model_animated">Search</button>
+                        <input id="search-bar" type="search" placeholder="Search" name="sc" value=<?php echo $_GET['sc'];?>
+>
+                        <button type="button" class="btn_model_animated" onclick="search()">Search</button>
                     </form>
                 </div>
                 <div id="results_row" class="row">
-                    <div id="card_list">
-                        <?php if ($_GET['st'] == (0)) {?>
-                            <?php $_smarty_tpl->_subTemplateRender(('../../controler/research_engine.php'), $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
-?>
-                                                    <?php } else { ?>
-                                                    <?php }?>
-                    </div>
-                    <div id="card_info_showing">
-                        <div id="card_infos">
-
-                        </div>
-                                            </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</main>
-
-<?php $_smarty_tpl->_subTemplateRender("file:helpers/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-echo '<script'; ?>
- src="/public/js/research.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="/public/js/add_field/show_offer_data.js"><?php echo '</script'; ?>
->
-<?php echo '<script'; ?>
- src="/public/js/add_field/show_company_data.js"><?php echo '</script'; ?>
-><?php }
+            <div id="card_list"><?php }
 }

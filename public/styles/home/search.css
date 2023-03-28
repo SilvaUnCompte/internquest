@@ -17,6 +17,10 @@ form {
   border-radius: var(--rad);
 }
 
+.hiden {
+  display: none;
+}
+
 #search-input,
 #search-button {
   height: var(--height);

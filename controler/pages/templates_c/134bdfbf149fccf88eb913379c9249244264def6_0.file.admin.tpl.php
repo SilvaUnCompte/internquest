@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-27 09:57:56
+/* Smarty version 4.2.1, created on 2023-03-28 20:22:50
   from 'C:\xampp\htdocs\www\internquest\public\templates\personal_page\admin.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_64214c848ffc91_91558130',
+  'unifunc' => 'content_6423307a3cbdf1_75753219',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '134bdfbf149fccf88eb913379c9249244264def6' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\personal_page\\admin.tpl',
-      1 => 1679868632,
+      1 => 1679988866,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_64214c848ffc91_91558130 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6423307a3cbdf1_75753219 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="form-row">
     <div class="form-col">
         <div class="research-account-div">
@@ -38,8 +38,8 @@ $_smarty_tpl->tpl_vars['i']->first = $_smarty_tpl->tpl_vars['i']->iteration === 
                     <p class="account-title"><b>.</b></p>
                     <p class="account-title"><b></b></p>
                     <div>
-                        <button class="btn-action" href='#'>Editer</button>
-                        <button class="btn-action" href='#'>Supprimer</button>
+                        <button class="btn-action" href='#'></button>
+                        <button class="btn-action" href='#'></button>
                     </div>
                 </div>
             <?php }

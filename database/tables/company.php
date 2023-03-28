@@ -19,6 +19,10 @@ class Company{
 
     public function __construct($id){
         global $company;
+        if ($company->count(['_id' => intval($id)]) == 0) {
+            echo header("HTTP/1.1 404");
+            exit;
+        }
         $this->companyArray = $company->findOne(['_id' => intval($id)]);
         $this->id = $this->companyArray['_id'];
         $this->name = $this->companyArray['name'];
@@ -45,6 +49,7 @@ class Company{
     public function set_name($string){$this->name = $string;}
     public function set_desc($string){$this->desc = $string;}
     public function set_visible($bool){$this->visible = $bool;}
+    public function set_locations($string){$this->locations = $string;}
     public function addSector($string){
         foreach($this->sectors as $sector)if($sector == $string)return -1;
         array_push($this->sectors, $string);
@@ -92,13 +97,13 @@ class Company{
         }
         return -1;
     }
-    public function addGrades($accountId, $grade){
+    public function addGrades($accountId, $entryGrade){
         foreach($this->grades as $grade){
             if($grade['id_account'] == intval($accountId)){
                 return -1;
             }
         }
-        $this->grades[] = ['id_account' => intval($accountId), 'grade' => intval($grade)];
+        $this->grades[] = ['id_account' => intval($accountId), 'grade' => intval($entryGrade)];
         return 0;
     }
     public function removeGrades($accountId){
@@ -148,10 +153,11 @@ class Company{
             "sectors" => $sectors
         ]);
     }
+
     public static function deleteCompany($id){
-        global $company;
-        $deletedResult = $company->deleteOne(['_id' => $id]);
-        return $deletedResult->getDeletedCount();
+        $deleted = new Company($id);
+        $deleted->set_visible(false);
+        $deleted->updateCompany();
     }
 }
 

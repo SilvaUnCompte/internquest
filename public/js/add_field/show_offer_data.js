@@ -12,7 +12,7 @@ function showOfferData(identifiant) {
         html += "<h3>Adresse courriel de contact : <a href=\"mailto:"+response.contactEmail+"\">"+response.contactEmail+"</a></h3>";
         html += "<h3> Niveau scholaire minimum : "+response.lvl+"</h3>";
         html += "<h3> Durée de stage : "+response.duration+" semaines </h3>";
-        html += "<h3> Salaire : environs "+response.remuneration+" € </h3>";
+        html += "<h3> Salaire : "+response.remuneration+"€/mois </h3>";
         html += "<h3>Description : </h3>";
         html += "<p>"+response.desc+"</p>"; 
         let n = 0;
@@ -24,14 +24,14 @@ function showOfferData(identifiant) {
             n++;
         }
         html += "</ul>";
-
         document.getElementById("card_infos").innerHTML = html;
     };
     xhr.send();
 }
 
-function deleteOffer(identifiant, researchType){
+function deleteOffer(identifiant){
     let xhr = new XMLHttpRequest();
-    xhr.open("GET", "/database/api/internship-deleting.php?id="+identifiant+"&typeRecherche="+researchType, true);
+    xhr.open("GET", "/database/api/internship-deleting.php?id="+identifiant, true);
+    xhr.onload = () => {window.location.reload();};
     xhr.send();
 }
