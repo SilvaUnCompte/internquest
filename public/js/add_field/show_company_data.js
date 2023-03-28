@@ -8,12 +8,13 @@ function showCompanyData(identifiant) {
         let averageGrade = 0;
         let grades = JSON.parse(response.grades);
         for(let i = 0; i < grades.length; i++) {
-            averageGrade += grades[i];
+            averageGrade += grades[i]['grade'];
         }
+        console.log(averageGrade);
         html += "<p id=\"identifiant\">"+identifiant+"</p>";
         html += "<h2>"+response.name+"</h2>";
         html += "<h3>Confiance du pilote : "+response.pilot_trust+"</h3>";
-        html += "<h3>Note moyenne : "+(response.grades.length != 0 ? averageGrade/response.grades.length : averageGrade)+"</h3>";
+        html += "<h3>Note moyenne : "+(response.grades.length != 0 ? Math.round((averageGrade/response.grades.length)*100)/100 : averageGrade)+"</h3>";
         html += "<h3>Notez cette entreprise : <input id=\"grade-entry\" name=\"grade\" type=\"number\" min=\"0\" min=\"5\"><button id=\"grade-button\" onclick=\"addGrade()\">Noter</button></h3>"
         html += "<h3>Description : </h3>";
         html += "<p>"+response.desc+"</p>"; 

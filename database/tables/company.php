@@ -80,7 +80,7 @@ class Company{
                 return -1;
             }
         }
-        array_push($this->internships, ['street_address' => $streetAddress, 'city' => $city, 'postal_code' => $postalCode]);
+        $this->locations[] = ['street_address' => $streetAddress, 'city' => $city, 'postal_code' => $postalCode];
         return 0;
     }
     public function removeLocations($streetAddress, $city, $postalCode){
@@ -94,11 +94,11 @@ class Company{
     }
     public function addGrades($accountId, $grade){
         foreach($this->grades as $grade){
-            if($grade['id_account'] == $accountId){
+            if($grade['id_account'] == intval($accountId)){
                 return -1;
             }
         }
-        array_push($this->internships, ['id_account' => $accountId, 'grade' => $grade]);
+        $this->grades[] = ['id_account' => intval($accountId), 'grade' => intval($grade)];
         return 0;
     }
     public function removeGrades($accountId){
