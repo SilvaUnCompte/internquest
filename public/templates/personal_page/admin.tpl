@@ -10,8 +10,8 @@
                     <p class="account-title"><b>.</b></p>
                     <p class="account-title"><b></b></p>
                     <div>
-                        <button class="btn-action" href='#'>Editer</button>
-                        <button class="btn-action" href='#'>Supprimer</button>
+                        <button class="btn-action" href='#'></button>
+                        <button class="btn-action" href='#'></button>
                     </div>
                 </div>
             {/for}

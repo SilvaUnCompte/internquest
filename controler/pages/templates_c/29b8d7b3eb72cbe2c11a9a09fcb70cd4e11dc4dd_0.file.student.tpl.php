@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2023-03-26 16:16:13
+/* Smarty version 4.2.1, created on 2023-03-28 10:26:26
   from 'C:\xampp\htdocs\www\internquest\public\templates\personal_page\student.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_642053ad5e8bd3_80186468',
+  'unifunc' => 'content_6422a4b2db3393_47945469',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '29b8d7b3eb72cbe2c11a9a09fcb70cd4e11dc4dd' => 
     array (
       0 => 'C:\\xampp\\htdocs\\www\\internquest\\public\\templates\\personal_page\\student.tpl',
-      1 => 1679840172,
+      1 => 1679859107,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_642053ad5e8bd3_80186468 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6422a4b2db3393_47945469 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div class="form-row wishlist">
     <div class="form-col">
         <label>Votre liste de souhaits : </label>

@@ -15,6 +15,7 @@ if (!isset($_SESSION['id'])) {
 
 $currentUser = new User($_SESSION['id']);
 $curentPage = $_GET['page'] ?? 0;
+$wishlist = [];
 
 for ($i = 0; $i < count($currentUser->get_wishlist()); $i++) {
     $curentIntern[$i] = new Internship($currentUser->get_wishlist()[$i]['id_internship']);

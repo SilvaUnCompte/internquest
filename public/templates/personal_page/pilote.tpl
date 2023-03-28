@@ -7,12 +7,12 @@
         <div class="account-list">
             {for $i=0 to 4}
                 <div class="account-example" id="student-{$i}">
-                    <p class="account-title"><b>Lastname</b></p>
-                    <p class="account-title"><b>Firstname</b></p>
-                    <p class="account-title"><b>Apply</b></p>
+                    <p class="account-title"><b>.</b></p>
+                    <p class="account-title"><b></b></p>
+                    <p class="account-title"><b></b></p>
                     <div>
-                        <button class="btn-action">Editer</button>
-                        <button class="btn-action">Supprimer</button>
+                        <button class="btn-action"></button>
+                        <button class="btn-action"></button>
                     </div>
                 </div>
             {/for}
