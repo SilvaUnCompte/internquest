@@ -45,13 +45,13 @@ document.getElementById("delete-button").addEventListener('click', ()=>{
 document.getElementById("postuler-button").addEventListener('click', ()=>{
     if(confirm('Êtes-vous sur de vouloir postuler ?')){
         let xhr = new XMLHttpRequest();
-        xhr.open("GET", "/database/api/postulation.php?id="+document.getElementById("identifiant").innerHTML, true);
-        xhr.send()
+        xhr.open("GET", "/database/api/postulation.php?id="+parseInt(document.getElementById("identifiant").innerHTML), true);
+        xhr.send();
     }
 })
 
 function addGrade(){
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "/database/api/grading.php?id="+document.getElementById("identifiant").innerHTML+"&grade="+document.getElementById('grade-entry').value, true);
-    xhr.send()
+    xhr.send();
 }
