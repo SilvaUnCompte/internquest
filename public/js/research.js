@@ -54,4 +54,5 @@ function addGrade(){
     let xhr = new XMLHttpRequest();
     xhr.open("GET", "/database/api/grading.php?id="+document.getElementById("identifiant").innerHTML+"&grade="+document.getElementById('grade-entry').value, true);
     xhr.send();
+    console.log("/database/api/grading.php?id="+document.getElementById("identifiant").innerHTML+"&grade="+document.getElementById('grade-entry').value);
 }

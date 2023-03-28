@@ -32,7 +32,6 @@
                 return -1;
             }
         }
-
         public static function researchCompany($text){
             global $company;
             $resultsTab = $company->find([],['projection' => ['_id' => 1, 'name' => 1, 'visible' => 1, 'pilot_trust' => 1, 'grades' => 1]]);
@@ -48,7 +47,6 @@
                             echo '<p class="unselectable">Note du pilote : '.$doc['pilot_trust'].'</p>';
                             echo '<p class="unselectable">'.(count($doc['grades']) != 0 ? $averageGrade/count($doc['grades']) : $averageGrade).'/5</p>';
                         echo '</div>';
-                        echo '<img class="image" src="/assets/images/corner.png" alt=\'corner-image\'>';
                     echo '</div>';
                 }
             }
